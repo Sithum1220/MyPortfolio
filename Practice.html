@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Customer Register</title>
+</head>
+<body>
+
+<form id="CustForm">
+    <fieldset>
+        <legend>Customer Registration Form</legend>
+
+        <label>First Name</label>
+        <input name="Fname" type="text" placeholder="First Name" required>
+        <br>
+        <br>
+        <label>Last Name</label>
+        <input name="Lname" type="text" placeholder="Last Name" required>
+        <br>
+        <br>
+        <label>Birthday</label>
+        <input name="Bday" type="date" placeholder="DOB" required>
+        <br>
+        <br>
+        <label>Tel</label>
+        <input name="Tel" type="tel" placeholder="Phone Number" required>
+        <br>
+        <br>
+        <label>Email</label>
+        <input name="Email" type="email" placeholder="Email" required>
+        <br>
+        <br>
+        <label>Address</label>
+        <input name="address" type="text" placeholder="Address" required>
+        <br>
+        <br>
+        <label>Age</label>
+        <input name="age" type="number" placeholder="Age" required>
+        <br>
+        <br>
+        <label>Profile Picture</label>
+        <input name="ProfilePic" type="file" placeholder="Profile Picture" required>
+        <br>
+        <br>
+        <label>Skin Colour</label>
+        <select name="skinColor" id="skinColor" required>
+            <option value="3">Fair</option>
+            <option value="3">Brown</option>
+            <option value="3">Black</option>
+        </select>
+        <br>
+        <br>
+        <label>Hair Colour</label>
+        <input name="hairColor" type="color" placeholder="Hair Colour" required>
+        <br>
+        <br>
+        <label>Gender</label>
+        <label> <b>Male</b></label>
+        <input name="male" type="radio">
+        <label> <b>Femail</b></label>
+        <input name="femail" type="radio">
+        <br>
+        <br>
+        <label>Registration time</label>
+        <input name="time" type="time" required>
+        <br>
+        <br>
+        <label>Registration Week</label>
+        <input name="week" type="week" required>
+        <br>
+        <br>
+        <label>Shift of Working</label>
+        <select name="working" id="shiftWorking" required>
+            <option value="3">10:00 AM</option>
+            <option value="3">12:00 PM</option>
+            <option value="3">03:00 PM</option>
+        </select>
+        <br>
+        <br>
+        <label>Languages</label>
+        <select name="Languages" id="languages" required>
+            <option value="3">English</option>
+            <option value="3">Sinhala</option>
+            <option value="3">tamil</option>
+        </select>
+        <br>
+        <br>
+        <label>About You</label>
+        <br>
+        <textarea name="about" id="aboutYou" cols="30" rows="5"></textarea>
+        <br>
+        <br>
+        <label>Skill With java</label>
+        <input name="skill" id="b" type="range" value="100" required>
+        <output name="range" for="b">100</output>
+        <br>
+        <br>
+    </fieldset>
+</form>
+</body>
+</html>

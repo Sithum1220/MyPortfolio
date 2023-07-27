@@ -10,7 +10,14 @@
 <body>
 <header>
     <h1>Portfolio</h1>
-    <nav></nav>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
 </header>
 <main>
     <section>
@@ -105,11 +112,21 @@
             <h1></h1>
         </aside>
         <aside>
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <button></button>
+            <form>
+
+                <input name="name" type="text" placeholder="Name" required>
+                <br>
+                <br>
+                <input name="email" type="email" placeholder="Email" required>
+                <br>
+                <br>
+                <input name="tel" type="tel" placeholder="Phone No.">
+                <br>
+                <br>
+                <textarea name="msg" id="" cols="30" rows="5"></textarea>
+                <br>
+                <button type="button">Send</button>
+            </form>
         </aside>
     </section>
 </main>
