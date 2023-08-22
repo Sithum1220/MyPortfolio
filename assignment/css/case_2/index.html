@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Case 02</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="8.0.1_normalize.css">
+
+    <style>
+
+        header {
+            height: 75px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            border: 2px solid;
+            background-color: white;
+            z-index: 1;
+        }
+
+        header > img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            margin-left: 30px;
+        }
+
+        header > ul {
+            position: absolute;
+            right: 0;
+        }
+
+        header > ul > li {
+            font-size: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-right: 25px;
+        }
+
+        main {
+            position: relative;
+
+        }
+
+        main > :first-child {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 24%;
+            background-color: purple;
+        }
+
+        main > :first-child > ul > li {
+            position: relative;
+            top: 100px;
+            list-style: none;
+            color: white;
+            font-size: 20px;
+            margin-left: 20px;
+            margin-top: 9%;
+
+        }
+
+        footer {
+            height: 50px;
+            background-color: darkgrey;
+            position: relative;
+            bottom: 0;
+        }
+
+        footer > h1 {
+            color: white;
+            font-size: 15px;
+            text-align: center;
+            padding-top: 15px;
+            margin-top: 0;
+        }
+
+        main > :nth-child(2) {
+            position: relative;
+            right: 0;
+            top: 80px;
+            margin-left: 25%;
+            width: 74vw;
+            height: 30vh;
+        }
+
+        main > :nth-child(2) > :first-child {
+            position: absolute;
+            left: 0;
+            background-color: lightgray;
+            width: 25vw;
+            height: 30vh;
+            border-bottom: 2px solid green;
+            border-left: 2px solid brown;
+            border-top: 2px solid brown;
+
+        }
+
+        main > :nth-child(2) > :nth-child(2) {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: lightgray;
+            width: 25vw;
+            height: 30vh;
+            border-left: 2px solid green;
+            border-bottom: 2px solid green;
+            border-top: 2px solid brown;
+
+        }
+
+        main > :nth-child(2) > :nth-child(3) {
+            position: absolute;
+            right: 0;
+            background-color: lightgray;
+            width: 25vw;
+            height: 30vh;
+            border-left: 2px solid green;
+            border-bottom: 2px solid green;
+            border-right: 2px solid brown;
+            border-top: 2px solid brown;
+
+        }
+
+        main > :nth-child(2) > div > img {
+            width: 25vw;
+            height: 30vh;
+
+        }
+
+        main > :nth-child(3) {
+            position: relative;
+            margin-top: 8%;
+            margin-left: 25%;
+            bottom: 0;
+
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="assest/img.png" width="150px" alt="IJSE PIcture">
+    <ul>
+        <li>Home</li>
+        <li>Services</li>
+        <li>Contact</li>
+        <li>About Us</li>
+    </ul>
+</header>
+<main>
+    <section>
+        <ul>
+            <li>
+                Home
+            </li>
+            <li>
+                Services
+            </li>
+            <li>
+                Contact
+            </li>
+            <li>
+                About Us
+            </li>
+        </ul>
+    </section>
+    <section>
+        <div><img class="img" src="assest/walk.gif" height="500" width="668"/></div>
+        <div><img class="img" src="assest/walk.gif" height="500" width="668"/></div>
+        <div><img class="img" src="assest/walk.gif" height="500" width="668"/></div>
+    </section>
+    <section>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequatur culpa dignissimos
+            enim exercitationem impedit ipsa iusto maxime molestias, nihil officiis, quam rem vitae voluptate? Cum
+            deleniti molestias non?
+        </p>
+    </section>
+</main>
+<footer>
+    <h1>
+        Develope By IJSE
+    </h1>
+</footer>
+</body>
+</html>
