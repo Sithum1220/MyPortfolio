@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Case 03</title>
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <link rel="stylesheet" href="assest/css/8.0.1_normalize.css">
+
+  <style>
+    body>section{
+      width: 100vw;
+      height: 100vh;
+    }
+    body>:first-child>:first-child{
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 250px;
+      height: 250px;
+      border-radius: 100%;
+      border: 20px solid gray;
+    }
+    body>:first-child>:first-child>div{
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 100%;
+      border: 20px solid red;
+    }
+    body>:first-child>:nth-child(2){
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        border-radius: 100%;
+        background-color: purple;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    body>:nth-child(2)>div{
+        position: relative;
+        width: 220px;
+        height: 220px;
+        border-radius: 100%;
+        background-color: #0095ff;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    body>:nth-child(3)>div{
+        position: relative;
+        width: 220px;
+        height: 220px;
+        border-radius: 100%;
+        background-color: deeppink;
+        top: 281.5px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    h1{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        color: white;
+    }
+
+  </style>
+</head>
+<body>
+<section>
+  <div>
+    <div></div>
+  </div>
+    <div>
+        <h1>Hello</h1>
+    </div>
+</section>
+<section>
+    <div>
+        <h1>Welcome To</h1>
+    </div>
+</section>
+<section>
+    <div>
+        <h1>Institute of Software Engineering</h1>
+    </div>
+</section>
+</body>
+</html>
