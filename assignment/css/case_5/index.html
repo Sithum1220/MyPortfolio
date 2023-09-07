@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Case 05</title>
+    <link rel="stylesheet" href="8.0.1_normalize.css">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+
+    <style>
+        section{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-rows: repeat(3,1fr);
+            grid-template-columns: repeat(4,1fr);
+            margin-bottom: 0;
+            margin-left: 0;
+        }
+        section>div{
+            border: 1px solid;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        section>:first-child{
+            background-color: red;
+        }
+        section>:nth-child(2){
+            background-color: green;
+        }
+        section>:nth-child(3){
+            background-color: orange;
+        }
+        section>:nth-child(4){
+            background-color: purple;
+        }
+        section>:nth-child(5){
+            background-color: pink;
+        }
+        section>:nth-child(6){
+            background-color: blue;
+        }
+        section>:nth-child(7){
+            background-color: brown;
+        }
+        section>:nth-child(8){
+            background-color: plum;
+        }
+        section>:nth-child(9){
+            background-color: darkblue;
+        }
+        section>:nth-child(10){
+            background-color: yellow;
+        }
+        section>:nth-child(11){
+            background-color: darkseagreen;
+        }
+        section>:nth-child(12){
+            background-color: lightblue;
+        }
+
+    </style>
+</head>
+<body>
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</section>
+</body>
+</html>
