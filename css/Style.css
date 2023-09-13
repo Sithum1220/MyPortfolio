@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Josefin+Sans&family=Libre+Baskerville:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Josefin+Sans&family=Libre+Baskerville:wght@700&family=Petrona:wght@500&display=swap');
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-image: url("../assests/images/backgroud.jpg");
@@ -9,10 +15,14 @@ body {
     position: relative;
 }
 
+header {
+    height: 70px;
+}
+
 header > h1:first-child {
     flex-shrink: 0;
     color: #FFF;
-    font-family:"Libre Baskerville";
+    font-family: 'Libre Baskerville', serif;
     font-size: 34px;
     font-style: normal;
     font-weight: 700;
@@ -21,11 +31,12 @@ header > h1:first-child {
     display: inline-block;
     margin-top: 20px;
 }
-header>:nth-child(2){
+
+header > :nth-child(2) {
     flex-shrink: 0;
-    margin-left: 0px;
+    margin-left: 0;
     color: #EADA4D;
-    font-family: "Libre Baskerville";
+    font-family: 'Libre Baskerville', serif;
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
@@ -34,19 +45,75 @@ header>:nth-child(2){
     margin-top: 20px;
 
 }
-header>nav>ul{
+
+header > nav {
     position: absolute;
     right: 0;
-    top: 0;
-    margin-top: 26px;
+    top: 18px;
 }
-header>nav>ul>li{
+
+header > nav > ul > li {
     display: inline-block;
     color: #FFF;
-    font-family: Inter;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     margin-right: 25px;
 }
+
+main > :first-child {
+    width: 100vw;
+    position: relative;
+    height: 88vh;
+}
+
+main > :first-child > :first-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 546px;
+    height: 143px;
+    flex-shrink: 0;
+    display: inline-block;
+    margin-left: 118px;
+}
+main > :first-child > div>h1 {
+   margin: 0;
+}
+main > :first-child > :first-child>:first-child{
+    color: #FFF;
+    font-family: 'Petrona', serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+
+main > :first-child > :first-child>:nth-child(2){
+    color: #FFE600;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 53px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+    margin-bottom: 5px;
+}
+main > :first-child > :first-child>:nth-child(3){
+    color: #FFF;
+    font-family: 'Petrona', serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+
+
+
