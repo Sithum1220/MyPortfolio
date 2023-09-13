@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Borel&family=Josefin+Sans&family=Libre+Baskerville:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Borel&family=Josefin+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Borel&family=Josefin+Sans&family=Libre+Baskerville:wght@700&family=Petrona:wght@500&display=swap');
+
 html {
     scroll-behavior: smooth;
 }
@@ -64,9 +65,8 @@ header > nav > ul > li {
 }
 
 main > :first-child {
-    width: 100vw;
     position: relative;
-    height: 88vh;
+    height: 90vh;
 }
 
 main > :first-child > :first-child {
@@ -81,10 +81,12 @@ main > :first-child > :first-child {
     display: inline-block;
     margin-left: 118px;
 }
-main > :first-child > div>h1 {
-   margin: 0;
+
+main > :first-child > div > h1 {
+    margin: 0;
 }
-main > :first-child > :first-child>:first-child{
+
+main > :first-child > :first-child > :first-child {
     color: #FFF;
     font-family: 'Petrona', serif;
     font-size: 24px;
@@ -94,7 +96,7 @@ main > :first-child > :first-child>:first-child{
     margin-bottom: 10px;
 }
 
-main > :first-child > :first-child>:nth-child(2){
+main > :first-child > :first-child > :nth-child(2) {
     color: #FFE600;
     font-family: 'Libre Baskerville', serif;
     font-size: 53px;
@@ -104,7 +106,8 @@ main > :first-child > :first-child>:nth-child(2){
     text-decoration-line: underline;
     margin-bottom: 5px;
 }
-main > :first-child > :first-child>:nth-child(3){
+
+main > :first-child > :first-child > :nth-child(3) {
     color: #FFF;
     font-family: 'Petrona', serif;
     font-size: 24px;
@@ -112,6 +115,64 @@ main > :first-child > :first-child>:nth-child(3){
     font-weight: 600;
     line-height: normal;
     text-decoration-line: underline;
+}
+
+main > :first-child > img {
+    position: absolute;
+    width: 500px;
+    right: 50px;
+    margin: 0;
+    bottom: 90px;
+    opacity: 0.6;
+}
+
+main > :nth-child(2) {
+    height: 100vh;
+    position: relative;
+}
+
+main > :nth-child(2) > div {
+    position: absolute;
+    top: 0;
+    right: 178px;
+    margin: 0;
+}
+
+main > :nth-child(2) > div > :first-child {
+    display: inline-block;
+    color: #FFF;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 71px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+
+main > :nth-child(2) > div > :nth-child(2) {
+    display: inline-block;
+    color: #FFE500;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 89px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+
+main > :nth-child(2) > div > :last-child {
+    width: 410px;
+    height: 4px;
+    background-color: white;
+}
+
+main > :nth-child(2) > img {
+    position: relative;
+    width: 500px;
+    top: 50px;
+    left: 80px;
+    opacity: 0.6;
+
 }
 
 
