@@ -1,0 +1,52 @@
+
+body {
+    background-image: url("../assests/images/backgroud.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.5s;
+    position: relative;
+}
+
+header > h1:first-child {
+    flex-shrink: 0;
+    color: #FFF;
+    font-family:"Libre Baskerville";
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 30px;
+    display: inline-block;
+    margin-top: 20px;
+}
+header>:nth-child(2){
+    flex-shrink: 0;
+    margin-left: 0px;
+    color: #EADA4D;
+    font-family: "Libre Baskerville";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: inline-block;
+    margin-top: 20px;
+
+}
+header>nav>ul{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 26px;
+}
+header>nav>ul>li{
+    display: inline-block;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 25px;
+}
