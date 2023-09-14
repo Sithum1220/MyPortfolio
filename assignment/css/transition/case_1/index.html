@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assest/css/8.0.1_normalize.css">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <title>Transition Case 01</title>
+
+    <style>
+        div {
+            transition-duration: 2s;
+            transition-property: right;
+            position: relative;
+            width: 200px;
+            height: 30px;
+            background-color: purple;
+            margin-bottom: 20px;
+            right: 150px;
+            padding-left: 10px;
+            padding-top: 15px;
+            color: white;
+        }
+
+        div>img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        div:first-child {
+            margin-top: 200px;
+        }
+
+        div:hover {
+            transition-duration: 2s;
+            transition-property: right;
+            right: 0;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    Menu One
+    <img src="assest/img/icons8-about-me-100.png" height="100" width="100"/></div>
+<div>
+    Menu Two
+    <img src="assest/img/icons8-counsel-64.png" height="64" width="64"/></div>
+<div>
+    Menu Three
+    <img src="assest/img/icons8-home-100.png" height="100" width="100"/></div>
+<div>
+    Menu Four
+    <img src="assest/img/icons8-project-100.png" height="100" width="100"/></div>
+<div>
+    Menu Five
+    <img src="assest/img/icons8-services-100.png" height="100" width="100"/></div>
+
+</body>
+</html>
