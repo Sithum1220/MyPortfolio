@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assest/css/8.0.1_normalize.css">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <title>Transition Case 02</title>
+
+    <style>
+        section {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-color: #0095ff;
+        }
+
+        section > div > h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            margin: 0;
+            transform: translate(-50%,-50%);
+        }
+
+        section > :first-child {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            width: 500px;
+            height: 500px;
+            border-radius: 100%;
+            background-color: gray;
+            border: 20px solid white;
+        }
+
+        section > :last-child {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            width: 500px;
+            height: 500px;
+            border-radius: 100%;
+            border: 20px solid white;
+            border-top: 20px solid purple;
+        }
+        section > :last-child:hover{
+            transition-duration: 3s;
+            transition-property: all;
+            transform: rotate(360deg);
+        }
+
+    </style>
+</head>
+<body>
+<section>
+    <div>
+        <h1>RWAD</h1>
+    </div>
+    <div></div>
+</section>
+</body>
+</html>
