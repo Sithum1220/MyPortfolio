@@ -143,6 +143,7 @@ body {
     border-radius: 30px;
     display: block;
     margin-bottom: 30px;
+
 }
 
 .email {
@@ -206,7 +207,7 @@ body {
     color: #000000;
     display: block;
     text-align: center;
-    padding: 11px 58px 10px 58px;
+    padding: 10px 58px 10px 58px;
     align-items: center;
     border-radius: 30px;
     justify-content: center;
@@ -220,8 +221,8 @@ body {
 
 .theme-btn > i {
     font-size: 24px;
-    margin-right: 10px;
-    margin-bottom: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 .theme-btn:hover {
@@ -230,29 +231,28 @@ body {
 }
 
 .main {
-    margin-left: 500px;
-    margin-top: 70px;
+
 }
 
-.main > :first-child {
+.main > section>:first-child {
     position: relative;
-    width: 135px;
-    height: 32px;
+    width: 150px;
+    height: 40px;
     flex-shrink: 0;
     border-radius: 32px;
     border: 1px solid #565656;
     background: #000;
 }
 
-.main > div > h4 {
+.main >section> div > h4 {
     position: relative;
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    font-size: 12px;
+    font-size: 16px;
     justify-content: center;
     font-weight: 200;
-    bottom: 10px;
+    bottom: 15px;
 }
 
 .hello {
@@ -296,6 +296,13 @@ main {
     height: 100%;
 }
 
+.main >:first-child{
+    width: 920px;
+    position: absolute;
+    right: 0;
+    top: 75px;
+}
+
 .hello h4 {
     position: relative;
     color: rgba(153, 153, 153, 0.90);
@@ -315,8 +322,11 @@ main {
     align-items: center;
     justify-content: center;
     /*margin-left: auto;*/
-    left: 550px;
-    top: 160px;
+    /*left: 520px;*/
+    /*top: 160px;*/
+
+    margin-left: 520px;
+    margin-top: 190px;
     border-radius: 50%;
     border: 1px solid #575757;
     position: relative;
@@ -334,4 +344,8 @@ main {
     color: #fff;
     font-size: 40px;
     display: block;
+}
+
+.count{
+
 }
