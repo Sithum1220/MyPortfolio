@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Josefin+Sans&family=Libre+Baskerville:wght@700&family=Petrona:wght@500&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary_color: #28e98c;
+}
+
+* {
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body .body-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    color: #999999;
+    background: #000000;
+    line-height: 1.7;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.menu {
+    border: 1px solid #575757;
+    border-radius: 30px;
+    position: fixed;
+    right: 68px;
+    top: 220px;
+    text-align: center;
+    gap: 16px;
+    padding: 20px;
+    background: #000000;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu > li {
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 2px;
+}
+
+.menu > li > a > i {
+    font-size: 20px;
+    color: #999999;
+
+}
+
+.menu > li > a > i:hover {
+    color: var(--primary_color);
+}
+
+.left-sidebar {
+    max-width: 280px;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid #565656;
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 40px;
+    z-index: 10;
+}
+
+.portfolio > h2 {
+    color: #FFF;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    display: inline-block;
+}
+
+.portfolio > h1 {
+    color: #27E98B;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    display: inline-block;
+}
+
+.left-sidebar .portfolio {
+    position: relative;
+    margin-bottom: 15px;
+    right: 10px;
+}
+
+.left-sidebar > img.me {
+    border-radius: 30px;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.email {
+    position: relative;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.address {
+    position: relative;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    margin: 0;
+}
+
+.copyright {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-profile {
+    gap: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.social-profile > ul > li {
+    list-style: none;
+    display: inline-block;
+}
+
+.left-sidebar .social-profile li a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 2px solid #565656;
+    border-radius: 50%;
+    color: #999999;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.left-sidebar .social-profile li a:hover {
+    color: var(--primary_color);
+    border-color: var(--primary_color);
+}
+
+.theme-btn {
+    position: relative;
+    max-width: 100%;
+    background: var(--primary_color);
+    color: #000000;
+    display: block;
+    text-align: center;
+    padding: 11px 58px 10px 58px;
+    align-items: center;
+    border-radius: 30px;
+    justify-content: center;
+    text-transform: uppercase;
+    border: none;
+    text-decoration: none;
+    transition: .3s;
+    cursor: pointer;
+    border: 2px solid var(--primary_color);
+}
+
+.theme-btn > i {
+    font-size: 24px;
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
+
+.theme-btn:hover {
+    background: none;
+    color: var(--primary_color);
+}
+
+.main {
+    margin-left: 500px;
+    margin-top: 70px;
+}
+
+.main > div {
+    position: relative;
+    width: 135px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    border: 1px solid #565656;
+    background: #000;
+}
+
+.main > div > h4 {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 12px;
+    justify-content: center;
+    font-weight: 200;
+    bottom: 10px;
+}
+
+.hello {
+    position: relative;
+    top: 70px;
+}
+
+.hello h2 {
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.hello h1 {
+    color: #27E98B;
+    font-family: "Inter", sans-serif;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+}
+
+.hello h3 {
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin: 0;
+}
+
+.hello h4 {
+    position: relative;
+    color: rgba(153, 153, 153, 0.90);
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    top: 35px;
+}
+
+
+
+
+
+
+
+
+
+
