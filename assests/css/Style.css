@@ -35,7 +35,7 @@ body {
     background: #000000;
     line-height: 1.7;
     overflow-x: hidden;
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 .menu {
@@ -465,6 +465,63 @@ body {
     width: 220px;
     height: 5px;
     background: #27E98B;
+    margin-bottom: 80px;
+}
+.item{
+    position: relative;
+    padding-left: 74px;
+    padding-bottom: 68px;
 }
 
+.item::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #656565;
+    border-radius: 50%;
+    left: -6px;
+    top: 7px;
+    transition: .3s;
+}
+.item::after{
+    content: '';
+    background: #333333;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    z-index: -1;
+}
+.item .date{
+    display: block;
+    margin-bottom: 35px;
+    transition: .3s;
+}
+.item>h1{
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 0;
+    color: #fff;
+}
 
+.item>h4{
+    font-size: 13px;
+    color: #999999;
+    margin-bottom: 18px;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.item h4:last-child {
+    margin-bottom: 0;
+}
+
+.item:hover::before {
+    background: var(--primary_color);
+}
+
+.item:hover .date {
+    color: var(--primary_color);
+}
