@@ -503,7 +503,12 @@ body {
 .certificate-img > img {
     margin-bottom: 30px;
     border-radius: 20px;
+    transition: transform 0.5s;
     cursor: pointer;
+}
+
+.certificate-img > img:hover {
+    transform: scale(1.1);
 }
 
 .skill-line > :first-child {
@@ -532,6 +537,11 @@ body {
     margin-top: 70px;
     position: relative;
     cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.tools:hover {
+    transform: scale(1.1);
 }
 
 .tools > img {
@@ -554,6 +564,11 @@ body {
     width: 700px;
     height: 425px;
     border-radius: 20px;
+    transition: transform 0.5s;
+}
+
+.project-img:hover video {
+    transform: scale(1.1);
 }
 
 .project-img > h4 {
@@ -563,6 +578,10 @@ body {
     font-weight: 300;
     color: #fff;
     cursor: pointer;
+}
+
+.project-img:hover h4 {
+    margin-top: 10px;
 }
 
 .git-logo > i {
@@ -580,7 +599,6 @@ body {
     margin: 0;
 
 }
-
 .git-logo > i:hover,
 .git-logo > h4:hover {
     color: var(--primary_color);
