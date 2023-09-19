@@ -745,8 +745,16 @@ body {
     bottom: 80px;
 }
 
+.input-group {
+    display: inline-block;
+}
+
+.input-group:nth-child(2) {
+    margin-left: 150px;
+}
+
 .input-group > label {
-    display: block;
+    display: inline-block;
     font-size: 12px;
     text-transform: uppercase;
     color: #fff;
@@ -757,11 +765,13 @@ body {
     color: #fc4545;
     font-size: 12px;
     top: 0;
+    display: inline-block;
 }
 
 .input-group > label span {
     color: #999999;
     text-transform: none;
+    display: inline-block;
 }
 
 .input-group select,
@@ -801,4 +811,20 @@ body {
 .input-group textarea::placeholder,
 .input-group input::placeholder {
     color: #666666;
+}
+
+.input-group:nth-child(3) {
+    display: block;
+    margin-top: 70px;
+}
+
+.input-group:nth-child(4) {
+    width: 770px;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+
+.input-group .submit-btn-wrap {
+    margin-bottom: 0;
+    height: 30px;
 }
