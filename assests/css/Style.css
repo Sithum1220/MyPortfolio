@@ -246,15 +246,19 @@ body {
     background: #000;
 }
 
+.title > h4 > i {
+    margin-right: 12px;
+}
+
 .subtitle {
     position: relative;
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 14px;
     justify-content: center;
     font-weight: 200;
-    bottom: 15px;
+    bottom: 10px;
 }
 
 .hello {
@@ -298,11 +302,12 @@ body {
 /*    height: 100%;*/
 /*}*/
 
-.super-section{
+.super-section {
     padding: 80px 0;
     position: relative;
     overflow: hidden;
 }
+
 .super-section > :first-child {
     position: relative;
     margin-left: 500px;
@@ -354,7 +359,7 @@ body {
 }
 
 
-.count-section>:first-child{
+.count-section > :first-child {
     color: #27E98B;
     font-family: "Inter", sans-serif;
     font-size: 75px;
@@ -364,7 +369,7 @@ body {
     display: inline-block;
 }
 
-.count-section>h1{
+.count-section > h1 {
     color: #27E98B;
     font-family: "Inter", sans-serif;
     font-size: 75px;
@@ -376,7 +381,7 @@ body {
     margin-bottom: 0;
 }
 
-.count-section>section>h4{
+.count-section > section > h4 {
     color: rgba(153, 153, 153, 0.90);
     font-family: "Inter", sans-serif;
     font-size: 16px;
@@ -388,57 +393,26 @@ body {
     margin-top: 0;
 }
 
-
-.interesting-me>h2{
-    color: #FFF;
-    font-family: "Inter", sans-serif;
-    font-size: 49px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    display: inline-block;
-    margin-bottom: 10px;
-    margin-top: 80px;
-
-}
-
-.interesting-me>h1{
-    color: #27E98B;
-    font-family: "Inter", sans-serif;
-    font-size: 61px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    display: inline-block;
-    margin-left: 12px;
-    margin-bottom: 10px;
-    margin-top: 80px;
-}
-.interesting-me>div{
-    width: 185.024px;
-    height: 5px;
-    background: #27E98B;
-}
-
-
-.about>:last-child{
+.about > :last-child {
     width: 600px;
-    margin-top: 62px;
+    margin-top: 0;
 }
 
-.about>:last-child>p{
+.about > :last-child > p {
     color: rgba(153, 153, 153, 0.90);
     font-family: "Josefin Sans", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 32px;
+    margin: 0;
 }
-.title>h4>i{
+
+.title > h4 > i {
     font-size: 20px;
 }
 
-.Experience > h2{
+.main-title > h2 {
     color: #FFF;
     font-family: "Inter", sans-serif;
     font-size: 49px;
@@ -446,10 +420,11 @@ body {
     font-weight: 400;
     line-height: normal;
     display: inline-block;
-    margin-bottom: 10px;
+    margin-bottom: 80px;
     margin-top: 80px;
 }
-.Experience>h1{
+
+.main-title > h1 {
     color: #27E98B;
     font-family: "Inter", sans-serif;
     font-size: 61px;
@@ -458,19 +433,15 @@ body {
     line-height: normal;
     display: inline-block;
     margin-left: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 80px;
     margin-top: 80px;
 }
-.Experience>div{
-    width: 220px;
-    height: 5px;
-    background: #27E98B;
-    margin-bottom: 80px;
-}
-.item{
+
+.item {
     position: relative;
     padding-left: 74px;
     padding-bottom: 68px;
+    cursor: pointer;
 }
 
 .item::before {
@@ -484,7 +455,8 @@ body {
     top: 7px;
     transition: .3s;
 }
-.item::after{
+
+.item::after {
     content: '';
     background: #333333;
     width: 1px;
@@ -494,19 +466,21 @@ body {
     top: 10px;
     z-index: -1;
 }
-.item .date{
+
+.item .date {
     display: block;
     margin-bottom: 35px;
     transition: .3s;
 }
-.item>h1{
+
+.item > h1 {
     font-size: 24px;
     font-weight: 300;
     margin-bottom: 0;
     color: #fff;
 }
 
-.item>h4{
+.item > h4 {
     font-size: 13px;
     color: #999999;
     margin-bottom: 18px;
@@ -523,5 +497,88 @@ body {
 }
 
 .item:hover .date {
+    color: var(--primary_color);
+}
+
+.certificate-img > img {
+    margin-bottom: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.skill-line > :first-child {
+    display: inline-block;
+
+}
+
+.skill-line > :nth-child(2) {
+    display: inline-block;
+    margin-left: 90px;
+}
+
+.skill-line > :last-child {
+    margin-top: 70px;
+}
+
+.tools {
+    width: 145px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 85px;
+    border: 1px solid #565656;
+    background: #000;
+    display: inline-block;
+    margin-right: 50px;
+    margin-top: 70px;
+    position: relative;
+    cursor: pointer;
+}
+
+.tools > img {
+    position: relative;
+    top: 30px;
+    left: 38px;
+}
+
+.tools > h4 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.tools:hover {
+    border-color: var(--primary_color);
+}
+
+.project-img > img {
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.project-img > h4 {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-size: 22px;
+    font-weight: 300;
+    color: #fff;
+    cursor: pointer;
+}
+
+.git-logo > i {
+    position: relative;
+    color: #FFFFFF;
+    font-size: 40px;
+    left: 320px;
+    margin-top: 20px;
+}
+
+.git-logo > h4 {
+    position: relative;
+    left: 303px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.git-logo > i:hover,
+.git-logo > h4:hover {
     color: var(--primary_color);
 }
