@@ -572,16 +572,12 @@ body {
 }
 
 .project-img > h4 {
-    margin-top: 0;
-    margin-bottom: 50px;
+    margin-top: 5px;
+    margin-bottom: 70px;
     font-size: 22px;
     font-weight: 300;
     color: #fff;
     cursor: pointer;
-}
-
-.project-img:hover h4 {
-    margin-top: 10px;
 }
 
 .git-logo > i {
