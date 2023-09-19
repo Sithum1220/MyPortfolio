@@ -692,7 +692,7 @@ body {
     transition: transform 0.5s;
 }
 
-.services-list>:first-child{
+.services-list > :first-child {
     margin-bottom: 30px;
 }
 
@@ -731,12 +731,12 @@ body {
     bottom: 5px;
 }
 
-.services-list>div:hover{
+.services-list > div:hover {
     border-color: var(--primary_color);
     transform: scale(1.1);
 }
 
-.main-title > h4{
+.main-title > h4 {
     position: relative;
     font-size: 24px;
     font-weight: 300;
@@ -744,10 +744,61 @@ body {
     color: #fff;
     bottom: 80px;
 }
-.input-group >label{
+
+.input-group > label {
     display: block;
     font-size: 12px;
     text-transform: uppercase;
     color: #fff;
-    margin-bottom: 2px;
+    margin-bottom: 7px;
+}
+
+.input-group > label sup {
+    color: #fc4545;
+    font-size: 12px;
+    top: 0;
+}
+
+.input-group > label span {
+    color: #999999;
+    text-transform: none;
+}
+
+.input-group select,
+.input-group textarea,
+.input-group input {
+    display: block;
+    color: #fff;
+    width: 100%;
+    border: none;
+    background: none;
+    font-size: 18px;
+    padding: 0;
+    transition: .2s;
+    padding-bottom: 3px;
+}
+
+.input-group textarea {
+    height: 140px;
+    border-bottom: 1px solid #555555;
+    resize: none;
+}
+
+.input-group select {
+    display: block;
+    margin-left: -5px !important;
+    font-weight: 300;
+}
+
+.input-group select:focus,
+.input-group textarea:focus,
+.input-group input:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #555555;
+}
+
+.input-group textarea::placeholder,
+.input-group input::placeholder {
+    color: #666666;
 }
