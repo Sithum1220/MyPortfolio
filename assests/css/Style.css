@@ -595,6 +595,7 @@ body {
     margin: 0;
 
 }
+
 .git-logo > i:hover,
 .git-logo > h4:hover {
     color: var(--primary_color);
@@ -612,10 +613,11 @@ body {
     transition: transform 0.5s;
 }
 
-.work:hover{
+.work:hover {
     transform: scale(1.2);
 }
-.work img{
+
+.work img {
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -677,4 +679,75 @@ body {
 .work:hover .layer {
     height: 100%;
 
+}
+
+.services-list > div {
+    width: 700px;
+    height: 230px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 1px solid #565656;
+    background: #000;
+    position: relative;
+    transition: transform 0.5s;
+}
+
+.services-list>:first-child{
+    margin-bottom: 30px;
+}
+
+.services-list > div > h1 {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 0;
+    color: #fff;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.services-list > div > h4 {
+    font-size: 16px;
+    color: #999999;
+    margin-bottom: 18px;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+.services-list > div > i {
+    position: absolute;
+    font-size: 30px;
+    right: 40px;
+    top: 30px;
+}
+
+.services-list > div > h5 {
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-bottom: 18px;
+    font-weight: 300;
+    margin-left: 30px;
+    position: absolute;
+    bottom: 5px;
+}
+
+.services-list>div:hover{
+    border-color: var(--primary_color);
+    transform: scale(1.1);
+}
+
+.main-title > h4{
+    position: relative;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 0;
+    color: #fff;
+    bottom: 80px;
+}
+.input-group >label{
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 2px;
 }
