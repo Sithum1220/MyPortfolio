@@ -549,9 +549,11 @@ body {
     border-color: var(--primary_color);
 }
 
-.project-img > img {
-    border-radius: 20px;
+.project-img > video {
     cursor: pointer;
+    width: 700px;
+    height: 425px;
+    border-radius: 20px;
 }
 
 .project-img > h4 {
@@ -576,6 +578,7 @@ body {
     left: 303px;
     color: #FFFFFF;
     margin: 0;
+
 }
 
 .git-logo > i:hover,
