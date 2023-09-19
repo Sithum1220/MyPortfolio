@@ -599,3 +599,82 @@ body {
 .git-logo > h4:hover {
     color: var(--primary_color);
 }
+
+.work {
+    width: 230px;
+    height: 130px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    display: inline-block;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    transition: transform 0.5s;
+}
+
+.work:hover{
+    transform: scale(1.2);
+}
+.work img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: block;
+    transition: transform 0.5s;
+    opacity: 0.9;
+    object-fit: cover;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 20px;
+    transition: height 0.5s;
+    background: #bdc3c7;
+    background: -webkit-linear-gradient(to bottom, #394049, #bdc3c7);
+    background: linear-gradient(to bottom, #394049, #bdc3c7);
+    opacity: 0.8;
+}
+
+.layer h3 {
+    font-weight: bold;
+    color: var(--primary_color);
+    /*margin-bottom: 60px;*/
+    position: relative;
+    right: 35px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: var(--primary_color);
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 60px;
+    background: linear-gradient(to top, #434343, #000000);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    right: 35px;
+    bottom: 30px;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
+
+}
