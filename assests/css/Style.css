@@ -348,7 +348,18 @@ body {
 
 .main .go-to-project-btn img {
     display: block;
-    animation: rotating 6s infinite linear;
+
+    animation-name:anima;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    /*animation: rotating 6s infinite linear;*/
+}
+@keyframes anima {
+    0%{
+        transform: rotate(-360deg);
+    }
 }
 
 .main .go-to-project-btn i {
