@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link href="assest/css/8.0.1_normalize.css" rel="stylesheet">
+    <title>Title</title>
+
+    <style>
+        section {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        div {
+            width: 170px;
+            height: 80px;
+            background-color: black;
+            border-radius: 20px;
+            position: relative;
+            animation-name: anima;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            /*animation-direction: alternate-reverse;*/
+            /*animation-delay: 2s;*/
+            left: 0;
+        }
+
+        @keyframes anima {
+            0% {
+                top: 0;
+                left: 0;
+                transform: rotate(0);
+                background-color: red;
+            }
+            25% {
+                top: 0;
+                left: 1265px;
+                transform: rotate(180deg);
+                background-color: #0095ff;
+            }
+            50% {
+
+                left: 1265px;
+                top: 700px;
+                transform: rotate(360deg);
+                background-color: purple;
+            }
+            75% {
+                top: 700px;
+                left: 0;
+                transform: rotate(180deg);
+                background-color: pink;
+
+            }
+
+            100% {
+                top: 0;
+                left: 0;
+                transform: rotate(360deg);
+                background-color: yellow;
+            }
+        }
+
+    </style>
+
+
+</head>
+<body>
+<section>
+    <div></div>
+</section>
+</body>
+</html>
