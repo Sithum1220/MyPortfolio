@@ -48,6 +48,39 @@
          margin-left: 0;
          margin-top: 148px;
     }
+
+    .main-title > h2 {
+        font-size: 30px;
+    }
+
+    .main-title > h1 {
+        font-size: 36px;
+    }
+
+    .about > :last-child {
+        width: 375px;
+    }
+
+    .item > h1 {
+        font-size: 22px;
+    }
+
+    .skill-line > :nth-child(2) {
+       margin: 0;
+    }
+
+    .skill-line > :last-child {
+        margin: 0;
+    }
+
+    .tools {
+        margin-right: 47px;
+    }
+
+    .project-img > video {
+        width: 360px;
+        height: 219px;
+    }
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
