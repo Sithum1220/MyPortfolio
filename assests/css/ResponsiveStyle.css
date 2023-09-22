@@ -29,7 +29,7 @@
     }
 
     .theme-btn {
-        padding: 10px 1px 10px 1px;
+        padding: 15px;
     }
 
     .super-section > :first-child {
@@ -62,7 +62,8 @@
         font-size: 60px;
         margin: 0;
     }
-    .count-section>:nth-child(2){
+
+    .count-section > :nth-child(2) {
         margin-left: 48px;
     }
 
@@ -70,6 +71,7 @@
         font-size: 14px;
         margin-right: 58px;
     }
+
     .main .go-to-project-btn {
         width: 175px;
         height: 175px;
@@ -119,6 +121,92 @@
     .certificate-img > img {
         width: 280px;
         height: 190px;
+    }
+
+    .skill-line > :nth-child(2) {
+        margin-left: 0;
+    }
+
+    .skill-line > :last-child {
+        margin-top: 0;
+    }
+
+    .tools {
+        width: 105px;
+        height: 160px;
+        margin-right: 40px;
+    }
+
+    .tools > img {
+        top: 25px;
+        left: 19px;
+    }
+
+    .tools > h4 {
+        margin-top: 30px;
+        font-size: 12px;
+    }
+
+    .project-img > video {
+        width: 280px;
+        height: 170px;
+    }
+
+    .project-img > h4 {
+        font-size: 10px;
+    }
+
+    .git-logo > i {
+        left: 118px;
+        margin-top: 0;
+    }
+
+    .git-logo > h4 {
+        left: 98px;
+    }
+
+    .work {
+        width: 130px;
+        height: 100px;
+        margin-right: 16px;
+    }
+
+    .main-img-section {
+        width: 280px;
+        height: 170px;
+    }
+
+    .services-list > div {
+        width: 280px;
+    }
+
+    .services-list > div > i {
+        font-size: 28px;
+        right: 20px;
+        top: 27px;
+    }
+
+    .services-list > div > h4 {
+        font-size: 12px;
+    }
+
+    .main-title > h4 {
+        font-size: 13px;
+        bottom: 65px;
+    }
+
+    .input-group:nth-child(2) {
+        margin-left: 0;
+        margin-top: 70px;
+    }
+
+    .input-group:nth-child(4) {
+        width: 280px;
+    }
+
+    .input-group textarea::placeholder,
+    .input-group input::placeholder {
+        font-size: 16px;
     }
 }
 
