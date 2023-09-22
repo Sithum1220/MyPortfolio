@@ -286,7 +286,14 @@
     }
 
     .tools {
-        margin-right: 47px;
+        margin-right: 40px;
+        margin-left: 20px;
+        width: 125px;
+        height: 185px;
+    }
+
+    .tools > img {
+        left: 30px;
     }
 
     .project-img > video {
