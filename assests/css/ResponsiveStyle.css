@@ -1,0 +1,106 @@
+@media screen and (max-width: 425px) {
+    .menu {
+        display: none;
+    }
+
+    .left-sidebar {
+        position: relative;
+        transform: translateY(0);
+        top: 15px;
+        left: 32px;
+    }
+
+    .super-section > :first-child {
+        margin-left: 32px;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .left-sidebar {
+        max-width: 635px;
+        left: 15px;
+        top: 15px;
+        transform: translateY(0);
+        padding: 50px;
+        /* z-index: 10; */
+        position: relative;
+    }
+
+    .social-profile > ul > li {
+        margin-left: 5px;
+    }
+
+    .super-section > :first-child {
+        margin-left: 30px;
+    }
+
+    .main .go-to-project-btn {
+        margin-left: 500px;
+    }
+
+    .certificate-img > img {
+        position: relative;
+        left: 52px;
+    }
+
+    .tools {
+        margin-right: 34px;
+    }
+
+    .project-img > video {
+        width: 675px;
+        height: 411px;
+        position: relative;
+        left: 16px;
+    }
+
+    .project-img > h4 {
+        margin-top: 7px;
+        margin-left: 15px;
+    }
+
+    .work {
+        width: 218px;
+        margin-right: 22px;
+    }
+
+    .main-img-section {
+        width: 710px;
+    }
+
+    .services-list > div {
+        width: 670px;
+        left: 18px;
+    }
+
+    .input-group:nth-child(4) {
+        width: 560px;
+    }
+}
+
+@media all and (min-width: 769px) and (max-width: 1024px) {
+    .menu {
+        display: none;
+    }
+
+    .left-sidebar {
+        max-width: 750px;
+        position: relative;
+        left: 86px;
+        top: 15px;
+        transform: translateY(0);
+        padding: 50px;
+    }
+
+    .super-section > :first-child {
+        margin-left: 100px;
+    }
+
+    .main .go-to-project-btn {
+        margin-left: 630px;
+    }
+}
