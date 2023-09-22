@@ -211,7 +211,173 @@
 }
 
 @media screen and (min-width: 321px) and (max-width: 375px){
+    .menu {
+        display: none;
+    }
 
+    .left-sidebar {
+        max-width: 252px;
+        position: relative;
+        left: 20px;
+        top: 15px;
+        transform: translateY(0);
+    }
+
+    .super-section > :first-child {
+        margin-left: 20px;
+    }
+
+    .hello h2 {
+        font-size: 45px;
+    }
+
+    .hello h1 {
+        font-size: 68px;
+    }
+
+    .hello h3 {
+        font-size: 18px;
+    }
+
+    .hello h4 {
+        font-size: 15px;
+    }
+
+    .main .go-to-project-btn {
+        margin-left: 0;
+        margin-top: 170px;
+    }
+
+    .count-section > :first-child {
+        font-size: 65px;
+    }
+
+    .count-section > h1 {
+        font-size: 65px;
+        margin-right: 65px;
+    }
+
+    .main-title > h2 {
+        font-size: 28px;
+        margin-bottom: 60px;
+        margin-top: 60px;
+    }
+
+    .main-title > h1 {
+        font-size: 34px;
+        margin-bottom: 60px;
+        margin-top: 60px;
+    }
+
+    .count-section > section > h4 {
+        font-size: 15px;
+        margin-right: 77px;
+    }
+
+    .super-section {
+        padding: 60px 0;
+    }
+
+    .about > :last-child {
+        width: 335px;
+    }
+
+    .about > :last-child > p {
+        font-size: 18px;
+    }
+
+    .item > h1 {
+        font-size: 16px;
+    }
+
+    .item > h4 {
+        font-size: 11px;
+    }
+
+    .item {
+        padding-left: 62px;
+    }
+
+    .certificate-img > img {
+        width: 335px;
+        height: 240px;
+    }
+
+    .skill-line > :nth-child(2) {
+        margin-left: 0;
+    }
+
+    .skill-line > :last-child {
+        margin-top: 0;
+    }
+    .tools {
+        width: 116px;
+        height: 175px;
+        margin-right: 37px;
+        margin-left: 20px;
+    }
+    .tools > img {
+        left: 25px;
+    }
+
+    .tools > h4 {
+        margin-top: 40px;
+        font-size: 14px;
+    }
+    .project-img > video {
+        width: 335px;
+        height: 204px;
+    }
+    .project-img > h4 {
+        font-size: 12px;
+    }
+
+    .git-logo > i {
+        left: 152px;
+        margin-top: 0;
+    }
+
+    .git-logo > h4 {
+        left: 134px;
+    }
+
+    .work {
+        width: 155px;
+        height: 110px;
+        margin-right: 20px;
+    }
+
+    .main-img-section {
+        width: 335px;
+        height: 240px;
+    }
+    .services-list > div {
+        width: 333px;
+    }
+
+    .services-list > div > h4 {
+        font-size: 13px;
+    }
+
+    .main-title > h4 {
+        font-size: 16px;
+        margin-bottom: 0;
+        bottom: 66px;
+    }
+
+    .input-group:nth-child(2) {
+        margin-left: 0;
+        margin-top: 70px;
+    }
+
+    .input-group:nth-child(4) {
+        width: 335px;
+    }
+
+    .input-group textarea::placeholder,
+    .input-group input::placeholder {
+        font-size: 16px;
+    }
 }
 
 @media screen and (min-width: 376px) and (max-width: 425px) {
