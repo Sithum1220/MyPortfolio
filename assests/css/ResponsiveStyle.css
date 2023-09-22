@@ -1,4 +1,54 @@
+@media screen and (max-width: 425px) {
+    .menu {
+        display: none;
+    }
 
+    .left-sidebar {
+        position: relative;
+        transform: translateY(0);
+        top: 15px;
+        left: 32px;
+    }
+
+    .super-section > :first-child {
+        margin-left: 32px;
+    }
+
+    .hello h4 {
+        font-size: 17px;
+    }
+
+    .hello h1 {
+        font-size: 75px;
+    }
+
+    .hello h3 {
+        font-size: 18px;
+    }
+
+    .count-section > :first-child {
+        margin: 0;
+        margin-right: 90px;
+        margin-top: 80px;
+    }
+
+    .count-section > h1 {
+       margin: 0;
+    }
+
+    .count-section > section > h4 {
+        margin: 0;
+    }
+
+    .count-section>section>:nth-child(2){
+        margin-left: 115px;
+    }
+
+    .main .go-to-project-btn {
+         margin-left: 0;
+         margin-top: 148px;
+    }
+}
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
     .menu {
