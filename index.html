@@ -15,7 +15,7 @@
     <link href="assests/font-awsome/css/all.css" rel="stylesheet">
     <title>Sithum Imesh</title>
     <link href="assests/font-awesome-pro-5/css/all.css" rel="stylesheet">
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
 
 
 </head>
@@ -67,6 +67,12 @@
         </a>
     </li>
     <li>
+        <a href="#my-gallery">
+            <span>Gallery</span>
+            <i class="fal fa-vector-square"></i>
+        </a>
+    </li>
+    <li>
         <a href="#services">
             <span>Services</span>
             <i class="fal fa-tasks-alt"></i>
@@ -85,7 +91,7 @@
         <h2>Port</h2>
         <h1>folio</h1>
     </div>
-    <img alt="Me" class="me" src="assests/images/myImg.png"/>
+    <img alt="Me" class="me" src="assests/images/myImg/my4.png"/>
     <h2 class="email">hello@SithumImesh</h2>
     <h2 class="address">Base in Hikkaduwa, SL</h2>
     <p class="copyright">&copy; 2023 Sithum. All Rights Reserved</p>
@@ -437,6 +443,30 @@
         </section>
     </section>
 
+    <section class="super-section" id="my-gallery">
+        <section class="gallery">
+            <div class="title">
+                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
+                    <i class="fal fa-vector-square"></i>Gallery
+                </h4>
+            </div>
+            <div class="main-title">
+                <h2>My</h2>
+                <h1>Gallery</h1>
+            </div>
+
+            <section class="main-img-section">
+                <section class="img">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </section>
+            </section>
+        </section>
+    </section>
+
     <section class="super-section" id="services">
         <section class="services">
             <div class="title">
@@ -484,26 +514,26 @@
             <section class="text-list">
                 <div class="input-group">
                     <label for="full-name">full Name <sup>*</sup></label>
-                    <input type="text" name="full-name" id="full-name" placeholder="Your Full Name">
+                    <input id="full-name" name="full-name" placeholder="Your Full Name" type="text">
                 </div>
 
                 <div class="input-group">
                     <label for="Email">Email <sup>*</sup></label>
-                    <input type="text" name="Email" id="Email" placeholder="Your Email Address">
+                    <input id="Email" name="Email" placeholder="Your Email Address" type="text">
                 </div>
 
                 <div class="input-group">
                     <label for="Mobile">Mobile <sup>*</sup></label>
-                    <input type="text" name="Mobile" id="Mobile" placeholder="Your Mobile Number">
+                    <input id="Mobile" name="Mobile" placeholder="Your Mobile Number" type="text">
                 </div>
 
                 <div class="input-group">
                     <label for="message">message</label>
-                    <textarea name="message" id="message" placeholder="WRITE YOUR MESSAGE HERE ..."></textarea>
+                    <textarea id="message" name="message" placeholder="WRITE YOUR MESSAGE HERE ..."></textarea>
                 </div>
 
                 <div class="input-group submit-btn-wrap">
-                    <button class="theme-btn" name="submit" type="submit" id="submit-form">send message</button>
+                    <button class="theme-btn" id="submit-form" name="submit" type="submit">send message</button>
                 </div>
             </section>
 

@@ -138,8 +138,9 @@ body {
 
 .left-sidebar .portfolio {
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     right: 10px;
+    width: 600px;
 }
 
 .left-sidebar > img.me {
@@ -166,17 +167,18 @@ body {
     text-align: center;
     font-weight: 300;
     margin: 0;
+    margin-bottom: 20px;
 }
 
 .copyright {
     font-size: 14px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .social-profile {
     gap: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-align: center;
 }
 
@@ -349,15 +351,16 @@ body {
 .main .go-to-project-btn img {
     display: block;
 
-    animation-name:anima;
+    animation-name: anima;
     animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-direction: normal;
     /*animation: rotating 6s infinite linear;*/
 }
+
 @keyframes anima {
-    0%{
+    0% {
         transform: rotate(-360deg);
     }
 }
@@ -838,4 +841,87 @@ body {
 .input-group .submit-btn-wrap {
     margin-bottom: 0;
     height: 30px;
+}
+
+.main-img-section {
+    width: 750px;
+    height: 500px;
+    /*border: 1px solid yellow;*/
+    overflow: hidden;
+    border-radius: 20px;
+    transition: transform 0.5s;
+
+}
+
+.img {
+    width: calc(100% * 5);
+    height: 100%;
+    /*border: 1px solid yellow;*/
+    display: flex;
+    animation-name: slid-animation;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+    animation-timing-function: revert;
+    animation-delay: 0.5s;
+
+}
+
+.img > div {
+    flex-grow: 1;
+    height: 100%;
+    /*border-radius: 20px;*/
+
+}
+
+.img > :nth-child(1) {
+    background: url("/assests/images/myImg/IMG_1081.JPG");
+    background-size: cover;
+    background-position: center;
+}
+
+.img > :nth-child(2) {
+    background: url("/assests/images/myImg/IMG_1082.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.img > :nth-child(3) {
+    background: url("/assests/images/myImg/IMG_1083.JPG");
+    background-size: cover;
+    background-position: center;
+}
+
+.img > :nth-child(4) {
+    background: url("/assests/images/myImg/IMG_1084.JPG");
+    background-size: cover;
+    background-position: center;
+}
+
+.img > :nth-child(5) {
+    background: url("/assests/images/myImg/IMG_1085.JPG");
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes slid-animation {
+    0% {
+        transform: translateX(0px);
+
+    }
+    25% {
+        transform: translateX(calc((-100% / 5) * 1));
+    }
+    50% {
+        transform: translateX(calc((-100% / 5) * 2));
+    }
+    75% {
+        transform: translateX(calc((-100% / 5) * 3));
+    }
+    100% {
+        transform: translateX(calc((-100% / 5) * 4));
+    }
+}
+
+.main-img-section:hover {
+    transform: scale(1.1);
 }
