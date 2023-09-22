@@ -1,19 +1,4 @@
-@media screen and (max-width: 425px) {
-    .menu {
-        display: none;
-    }
 
-    .left-sidebar {
-        position: relative;
-        transform: translateY(0);
-        top: 15px;
-        left: 32px;
-    }
-
-    .super-section > :first-child {
-        margin-left: 32px;
-    }
-}
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
     .menu {
@@ -82,6 +67,7 @@
     }
 }
 
+
 @media all and (min-width: 769px) and (max-width: 1024px) {
     .menu {
         display: none;
@@ -104,3 +90,4 @@
         margin-left: 630px;
     }
 }
+
