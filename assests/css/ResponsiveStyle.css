@@ -215,7 +215,7 @@
     }
 }
 
-@media all and (min-width: 321px) and (max-width: 375px) {
+@media all and (max-width:384px){
     .menu {
         display: none;
     }
@@ -392,7 +392,7 @@
     }
 }
 
-@media all and (min-width: 376px) and (max-width: 425px) {
+@media all and (max-width:424px) {
     .menu {
         display: none;
     }
@@ -538,7 +538,7 @@
     }
 }
 
-@media all and (min-width: 426px) and (max-width: 768px) {
+@media all and (max-width:768px) {
     .menu {
         display: none;
     }
@@ -617,7 +617,7 @@
 }
 
 
-@media all and (min-width: 769px) and (max-width: 1024px) {
+@media all and (max-width:1024px) {
     .menu {
         display: none;
     }
