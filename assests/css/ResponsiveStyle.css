@@ -215,7 +215,7 @@
     }
 }
 
-@media screen and (min-width: 321px) and (max-width: 375px){
+@media screen and (min-width: 321px) and (max-width: 375px) {
     .menu {
         display: none;
     }
@@ -317,12 +317,14 @@
     .skill-line > :last-child {
         margin-top: 0;
     }
+
     .tools {
         width: 116px;
         height: 175px;
         margin-right: 37px;
         margin-left: 20px;
     }
+
     .tools > img {
         left: 25px;
     }
@@ -331,10 +333,12 @@
         margin-top: 40px;
         font-size: 14px;
     }
+
     .project-img > video {
         width: 335px;
         height: 204px;
     }
+
     .project-img > h4 {
         font-size: 12px;
     }
@@ -358,6 +362,7 @@
         width: 335px;
         height: 240px;
     }
+
     .services-list > div {
         width: 333px;
     }
@@ -581,6 +586,7 @@
         margin-top: 7px;
         margin-left: 15px;
     }
+
     .git-logo > i {
         left: 352px;
     }
@@ -588,6 +594,7 @@
     .git-logo > h4 {
         left: 334px;
     }
+
     .work {
         width: 218px;
         margin-right: 22px;
@@ -647,6 +654,12 @@
 
     .main-img-section {
         margin-left: 36px;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .super-section > :first-child {
+        margin-left: 830px;
     }
 }
 
