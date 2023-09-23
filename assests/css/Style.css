@@ -102,11 +102,13 @@ body {
 }
 
 .left-sidebar {
-    max-width: 280px;
+    /*max-width: 280px;*/
+    max-width: 20vw;
     width: 100%;
     border-radius: 30px;
     border: 1px solid #565656;
     position: fixed;
+   margin: auto;
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
