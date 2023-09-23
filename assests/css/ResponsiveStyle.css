@@ -1,4 +1,4 @@
-@media screen and (max-width: 320px) {
+@media all and (max-width: 320px) {
     .menu {
         display: none;
     }
@@ -215,7 +215,7 @@
     }
 }
 
-@media screen and (min-width: 321px) and (max-width: 375px) {
+@media all and (min-width: 321px) and (max-width: 375px) {
     .menu {
         display: none;
     }
@@ -392,7 +392,7 @@
     }
 }
 
-@media screen and (min-width: 376px) and (max-width: 425px) {
+@media all and (min-width: 376px) and (max-width: 425px) {
     .menu {
         display: none;
     }
@@ -538,7 +538,7 @@
     }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media all and (min-width: 426px) and (max-width: 768px) {
     .menu {
         display: none;
     }
@@ -657,7 +657,7 @@
     }
 }
 
-@media screen and (min-width: 2560px) {
+@media all and (min-width: 2560px) {
     .super-section > :first-child {
         margin-left: 830px;
     }
