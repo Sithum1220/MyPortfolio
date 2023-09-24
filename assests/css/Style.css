@@ -35,7 +35,6 @@ body {
     background: #000000;
     line-height: 1.7;
     overflow-x: hidden;
-    /*height: 100vh;*/
 }
 
 .menu {
@@ -56,7 +55,6 @@ body {
 .menu > li {
     display: inline-block;
     font-size: 16px;
-    margin-right: 2px;
 }
 
 
@@ -102,17 +100,15 @@ body {
 }
 
 .left-sidebar {
-    /*max-width: 280px;*/
     max-width: 20vw;
     width: 100%;
     border-radius: 30px;
     border: 1px solid #565656;
     position: fixed;
-   margin: auto;
-    left: 20px;
-    top: 50%;
+    margin: auto;
     transform: translateY(-50%);
     padding: 40px;
+    top: 50%;
     z-index: 10;
 }
 
@@ -142,7 +138,7 @@ body {
     position: relative;
     margin-bottom: 20px;
     right: 10px;
-    width: 600px;
+    width: 100%;
 }
 
 .left-sidebar > img.me {
@@ -169,24 +165,29 @@ body {
     text-align: center;
     font-weight: 300;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .copyright {
     font-size: 14px;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .social-profile {
-    gap: 16px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     text-align: center;
+}
+
+.social-profile > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
 }
 
 .social-profile > ul > li {
     list-style: none;
-    display: inline-block;
 }
 
 .left-sidebar .social-profile li a {
@@ -313,8 +314,7 @@ body {
 }
 
 .super-section > :first-child {
-    position: relative;
-    margin-left: 500px;
+    padding-left: 28rem;
 }
 
 /*.main >:first-child{*/
@@ -516,14 +516,26 @@ body {
     color: var(--primary_color);
 }
 
-.certificate-img > img {
+.certificate-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 78%;
+    gap: 20px;
+}
+
+.certificate-img > div {
+    transition: transform 0.5s;
+
+}
+
+.certificate-img > div > img {
     margin-bottom: 30px;
     border-radius: 20px;
-    transition: transform 0.5s;
     cursor: pointer;
 }
 
-.certificate-img > img:hover {
+.certificate-img > div:hover {
     transform: scale(1.1);
 }
 
@@ -537,9 +549,21 @@ body {
     margin-left: 90px;
 }
 
-.skill-line > :last-child {
-    margin-top: 70px;
+
+.tools-section {
+    display: flex;
+    flex-direction: row;
+    padding-top: 3rem;
+    flex-wrap: wrap;
 }
+
+.tools-section > :first-child {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
 
 .tools {
     width: 145px;
@@ -548,9 +572,6 @@ body {
     border-radius: 85px;
     border: 1px solid #565656;
     background: #000;
-    display: inline-block;
-    margin-right: 50px;
-    margin-top: 70px;
     position: relative;
     cursor: pointer;
     transition: transform 0.5s;
@@ -575,10 +596,24 @@ body {
     border-color: var(--primary_color);
 }
 
+.project > :nth-child(3) {
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 78%;
+}
+
+.project-img {
+    cursor: pointer;
+    width: 576px;
+    border-radius: 20px;
+    transition: transform 0.5s;
+}
+
 .project-img > video {
     cursor: pointer;
-    width: 700px;
-    height: 425px;
+    height: 350px;
     border-radius: 20px;
     transition: transform 0.5s;
 }
@@ -600,15 +635,14 @@ body {
     position: relative;
     color: #FFFFFF;
     font-size: 40px;
-    left: 320px;
     margin-top: 20px;
 }
 
 .git-logo > h4 {
     position: relative;
-    left: 303px;
     color: #FFFFFF;
     margin: 0;
+    left: -20%;
 
 }
 
@@ -617,15 +651,22 @@ body {
     color: var(--primary_color);
 }
 
+.assignment-list {
+    display: flex;
+}
+
+.assignment-list > section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 40px;
+}
+
 .work {
     width: 230px;
     height: 130px;
-    position: relative;
     overflow: hidden;
     border-radius: 20px;
-    display: inline-block;
-    margin-right: 30px;
-    margin-bottom: 20px;
     transition: transform 0.5s;
 }
 
@@ -733,8 +774,8 @@ body {
 .services-list > div > i {
     position: absolute;
     font-size: 30px;
-    right: 40px;
-    top: 30px;
+    right: 8%;
+    top: 16%;
 }
 
 .services-list > div > h5 {
