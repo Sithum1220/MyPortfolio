@@ -238,7 +238,7 @@
     }
 }
 
-@media all and (max-width: 375px) {
+@media all and (min-width: 321px) and (max-width: 375px) {
     .menu {
         display: none;
     }
@@ -356,7 +356,7 @@
     .tools-section > :first-child {
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: repeat(2, 1fr);
-        gap: 4.7rem;
+        /*gap: 4.7rem;*/
     }
 
     .tools > img {
@@ -449,7 +449,7 @@
     }
 }
 
-@media all and (max-width: 425px) {
+@media all and (min-width: 376px) and (max-width: 425px) {
     .menu {
         display: none;
     }
@@ -480,7 +480,7 @@
     }
 
     .hello h1 {
-        font-size: 75px;
+        font-size: 65px;
     }
 
     .hello h3 {
@@ -531,7 +531,7 @@
     .tools-section > :first-child {
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: repeat(2, 1fr);
-        gap: 5rem;
+        /*gap: 5rem;*/
     }
 
     .tools-section {

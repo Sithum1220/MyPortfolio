@@ -556,7 +556,7 @@ body {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(4, 1fr);
-    gap: 5rem;
+    gap: 80px;
 }
 
 
@@ -737,9 +737,9 @@ body {
 }
 
 .services-list > div {
-    width: 700px;
-    height: 230px;
-    flex-shrink: 0;
+    width: 78%;
+    padding-bottom: 80px;
+    /*padding-top: 40px;*/
     border-radius: 20px;
     border: 1px solid #565656;
     background: #000;
@@ -751,8 +751,8 @@ body {
     margin-bottom: 30px;
 }
 
-.services-list > div > h1 {
-    font-size: 24px;
+.services-list > div > div > h1 {
+    font-size: 20px;
     font-weight: 300;
     margin-bottom: 0;
     color: #fff;
@@ -760,7 +760,11 @@ body {
     margin-top: 20px;
 }
 
-.services-list > div > h4 {
+.services-list > div > div {
+    width: 78%;
+}
+
+.services-list > div > div > h4 {
     font-size: 16px;
     color: #999999;
     margin-bottom: 18px;
@@ -769,17 +773,18 @@ body {
     margin-left: 30px;
 }
 
-.services-list > div > i {
+.services-list > div i {
     position: absolute;
-    font-size: 30px;
+    font-size: 20px;
+    color: #27E98B;
     right: 8%;
-    top: 16%;
+    top: 12%;
 }
 
 .services-list > div > h5 {
     font-size: 14px;
     color: #FFFFFF;
-    margin-bottom: 18px;
+    /*margin-bottom: 18px;*/
     font-weight: 300;
     margin-left: 30px;
     position: absolute;
@@ -801,10 +806,11 @@ body {
 
 .input-group {
     display: inline-block;
+    /*width: 150px;*/
 }
 
-.input-group:nth-child(2) {
-    margin-left: 150px;
+.input-group:nth-child(1) {
+    margin-right: 105px;
 }
 
 .input-group > label {
@@ -836,7 +842,7 @@ body {
     width: 100%;
     border: none;
     background: none;
-    font-size: 18px;
+    font-size: 14px;
     padding: 0;
     transition: .2s;
     padding-bottom: 3px;
