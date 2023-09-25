@@ -398,6 +398,7 @@ body {
     display: inline-block;
     margin: 0;
 }
+
 .about > :last-child {
     width: 600px;
     margin-top: 0;
@@ -417,7 +418,7 @@ body {
     font-size: 20px;
 }
 
-.main-title{
+.main-title {
     margin-top: 15%;
     margin-bottom: 15%;
 }
@@ -577,7 +578,7 @@ body {
 }
 
 .tools > img {
-   margin: auto;
+    margin: auto;
 }
 
 .tools > h4 {
@@ -623,18 +624,23 @@ body {
     cursor: pointer;
 }
 
+.project-img:last-child {
+    display: flex;
+    justify-content: center;
+}
+
 .git-logo > i {
     position: relative;
     color: #FFFFFF;
     font-size: 40px;
     margin-top: 20px;
+    margin-left: 16px;
 }
 
 .git-logo > h4 {
     position: relative;
     color: #FFFFFF;
     margin: 0;
-    left: -20%;
 
 }
 
