@@ -384,7 +384,7 @@ body {
 .main-count-section {
     display: flex;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 15%;
     margin-top: 70px;
 }
 
