@@ -40,8 +40,16 @@
         padding: 0 2rem;
     }
 
-    .count-section > section {
-        display: flex;
+    .main-count-section {
+        gap: 3rem;
+    }
+
+    .count-section > h1 {
+        font-size: 50px;
+    }
+
+    .count-section > p {
+        font-size: 14px;
     }
 
     .hello h2 {
@@ -52,32 +60,12 @@
         font-size: 53px;
     }
 
-
     .hello h3 {
         font-size: 14px;
     }
 
     .hello h4 {
         font-size: 11px;
-    }
-
-    .count-section > :first-child {
-        font-size: 60px;
-        margin: 0;
-    }
-
-    .count-section > h1 {
-        font-size: 60px;
-        margin: 0;
-    }
-
-    .count-section > :nth-child(2) {
-        margin-left: 48px;
-    }
-
-    .count-section > section > h4 {
-        font-size: 14px;
-        margin-right: 58px;
     }
 
     .main .go-to-project-btn {
@@ -91,19 +79,14 @@
 
     .main-title > h2 {
         font-size: 23px;
-        margin-bottom: 60px;
-        margin-top: 60px;
     }
-
 
     .main-title > h1 {
         font-size: 28px;
-        margin-bottom: 60px;
-        margin-top: 60px;
     }
 
     .about > :last-child {
-        width: 290px;
+        max-width: 100%;
     }
 
     .about > :last-child > p {
@@ -150,8 +133,9 @@
     }
 
     .tools {
-        width: 105px;
-        height: 160px;
+        padding: 7px;
+        display: flex;
+        flex-direction: column;
     }
 
     .tools-section > :first-child {
@@ -161,22 +145,17 @@
         width: 100%;
     }
 
-    /*.project > :nth-child(3) {*/
-    /*    width: 100%;*/
-    /*}*/
     .tools > img {
-        top: 25px;
-        left: 19px;
+        margin: auto;
     }
 
     .tools > h4 {
-        margin-top: 30px;
         font-size: 12px;
     }
 
     .project-img > video {
         width: 100%;
-        height: 85%;
+        height: 156px;
     }
 
     .project > :nth-child(3) {
@@ -186,22 +165,22 @@
 
     .project-img > h4 {
         font-size: 10px;
-        margin: 0;
+        margin-top: 10px;
+        margin-bottom: 15px;
     }
 
-    .git-logo > i {
-        left: 20px;
-        margin-top: 40px;
-    }
-
-    .git-logo > h4 {
-        left: 3px;
-    }
-
+    /*.git-logo > i {*/
+    /*    left: 20px;*/
+    /*    margin-top: 40px;*/
+    /*}*/
+    /*.git-logo > h4 {*/
+    /*    left: 3px;*/
+    /*}*/
     .work {
         width: 100%;
         height: 80px;
     }
+
     .assignment-list > section {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
@@ -229,7 +208,6 @@
 
     .main-title > h4 {
         font-size: 13px;
-        bottom: 65px;
     }
 
     .input-group:nth-child(2) {
@@ -249,6 +227,18 @@
     .left-sidebar .portfolio {
         width: 100%;
     }
+
+    .layer h3 {
+        font-size: 12px;
+    }
+
+    .layer a {
+        margin-top: 10px;
+        font-size: 22px;
+        width: 50px;
+        height: 50px;
+        bottom: 23px;
+    }
 }
 
 @media all and (min-width: 321px) and (max-width: 375px) {
@@ -256,8 +246,8 @@
         display: none;
     }
 
-    .left-sidebar .portfolio {
-        width: 100%;
+    .super-section > :first-child {
+        padding: 0 2rem;
     }
 
     .left-sidebar {
@@ -279,7 +269,7 @@
     }
 
     .hello h1 {
-        font-size: 68px;
+        font-size: 65px;
     }
 
     .hello h3 {
@@ -287,7 +277,7 @@
     }
 
     .hello h4 {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .main .go-to-project-btn {
@@ -295,38 +285,39 @@
         margin-top: 170px;
     }
 
-    .count-section > :first-child {
-        font-size: 65px;
+    .main-count-section {
+        gap: 3rem;
     }
 
     .count-section > h1 {
-        font-size: 65px;
-        margin-right: 65px;
+        font-size: 50px;
     }
 
+    /*.count-section > h1:nth-child(2) {*/
+    /*    font-size: 60px;*/
+    /*    margin-left: 77px;*/
+    /*}*/
+    /*.count-section > section {*/
+    /*    display: flex;*/
+    /*}*/
     .main-title > h2 {
-        font-size: 28px;
-        margin-bottom: 60px;
-        margin-top: 60px;
+        font-size: 25px;
     }
 
     .main-title > h1 {
-        font-size: 34px;
-        margin-bottom: 60px;
-        margin-top: 60px;
+        font-size: 30px;
     }
 
-    .count-section > section > h4 {
-        font-size: 15px;
-        margin-right: 77px;
-    }
-
+    /*.count-section > section > h4 {*/
+    /*    font-size: 15px;*/
+    /*    margin-right: 77px;*/
+    /*}*/
     .super-section {
         padding: 60px 0;
     }
 
     .about > :last-child {
-        width: 335px;
+        width: 100%;
     }
 
     .about > :last-child > p {
@@ -345,9 +336,8 @@
         padding-left: 62px;
     }
 
-    .certificate-img > img {
-        width: 335px;
-        height: 240px;
+    .certificate-img {
+        width: 100%;
     }
 
     .skill-line > :nth-child(2) {
@@ -358,29 +348,44 @@
         margin-top: 0;
     }
 
+    /*.tools-section {*/
+    /*    padding-top: 3rem;*/
+    /*    flex-wrap: wrap;*/
+    /*}*/
     .tools {
-        width: 116px;
-        height: 175px;
-        margin-right: 37px;
-        margin-left: 20px;
+        padding: 14px;
+    }
+
+    .tools-section > :first-child {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4.7rem;
     }
 
     .tools > img {
-        left: 25px;
+        /*padding: 10px;*/
+        max-width: 100%;
+        display: block;
+        margin: auto;
     }
 
     .tools > h4 {
-        margin-top: 40px;
         font-size: 14px;
     }
 
     .project-img > video {
-        width: 335px;
-        height: 204px;
+        width: 100%;
+        height: 189px;
+    }
+
+    .project > :nth-child(3) {
+        width: 100%;
     }
 
     .project-img > h4 {
-        font-size: 12px;
+        font-size: 11px;
+        margin-top: 10px;
+        margin-bottom: 15px;
     }
 
     .git-logo > i {
@@ -393,30 +398,50 @@
     }
 
     .work {
-        width: 155px;
-        height: 110px;
-        margin-right: 20px;
+        width: 100%;
+        height: 90px;
+    }
+
+    .layer h3 {
+        font-size: 12px;
+    }
+
+    .layer a {
+        margin-top: 15px;
+        font-size: 20px;
+        bottom: 20px;
+    }
+
+    .assignment-list > section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 40px;
     }
 
     .main-img-section {
-        width: 335px;
-        height: 240px;
+        width: 100%;
+        height: 220px;
     }
 
     .services-list > div {
-        width: 333px;
+        width: 100%;
     }
 
     .services-list > div > h4 {
         font-size: 13px;
+        margin-top: 20px;
     }
 
     .main-title > h4 {
-        font-size: 16px;
-        margin-bottom: 0;
-        bottom: 66px;
+        font-size: 14px;
     }
 
+    /*.main-title > h4 {*/
+    /*    font-size: 16px;*/
+    /*    margin-bottom: 0;*/
+    /*    bottom: 66px;*/
+    /*}*/
     .input-group:nth-child(2) {
         margin-left: 0;
         margin-top: 70px;
