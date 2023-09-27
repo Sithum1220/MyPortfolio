@@ -241,6 +241,10 @@
     .tools-section {
         justify-content: center;
     }
+    .main-certificate {
+        width: 100%;
+
+    }
 }
 
 @media all and (min-width: 321px) and (max-width: 375px) {
@@ -265,7 +269,6 @@
     /*.super-section > :first-child {*/
     /*    padding-left: 2rem;*/
     /*}*/
-
     .hello h2 {
         font-size: 45px;
     }
@@ -443,8 +446,13 @@
     .input-group .submit-btn-wrap {
         width: 100%;
     }
+
     .tools-section {
         justify-content: center;
+    }
+    .main-certificate {
+        width: 100%;
+
     }
 }
 
@@ -470,7 +478,6 @@
     /*.super-section > :first-child {*/
     /*    padding-left: 2rem;*/
     /*}*/
-
     .hello h2 {
         font-size: 45px;
     }
@@ -648,8 +655,13 @@
     .input-group .submit-btn-wrap {
         width: 100%;
     }
+
     .tools-section {
         justify-content: center;
+    }
+    .main-certificate {
+        width: 100%;
+
     }
 }
 
@@ -851,6 +863,22 @@
     .tools-section {
         justify-content: center;
     }
+
+    .certificate-img > div {
+        width: 75%;
+    }
+
+    .project-img {
+        width: 75%;
+    }
+
+    .assignment-list {
+        justify-content: center;
+    }
+    .main-certificate {
+        width: 100%;
+
+    }
 }
 
 @media all and (min-width: 576px) and (max-width: 1024px) {
@@ -894,7 +922,7 @@
     }
 
     .main .go-to-project-btn {
-       margin-left: auto;
+        margin-left: auto;
     }
 
     .count-section > h1 {
@@ -1046,6 +1074,19 @@
 
     .input-group {
         width: 349px;
+    }
+
+    .certificate-img > div {
+        width: 75%;
+    }
+
+    .project-img {
+        width: 75%;
+    }
+
+    .main-certificate {
+        width: 100%;
+
     }
 }
 
