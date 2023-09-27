@@ -599,14 +599,13 @@ body {
 
 .project-img {
     cursor: pointer;
-    width: 576px;
     border-radius: 20px;
     transition: transform 0.5s;
 }
 
 .project-img > video {
     cursor: pointer;
-    height: 350px;
+    height: auto;
     border-radius: 20px;
     transition: transform 0.5s;
 }
