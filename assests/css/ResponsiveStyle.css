@@ -77,11 +77,12 @@
     }
 
     .main-title > h2 {
-        font-size: 23px;
+        font-size: 22px;
+        margin: 0;
     }
 
     .main-title > h1 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .about > :last-child {
@@ -881,7 +882,7 @@
     }
 }
 
-@media all and (min-width: 576px) and (max-width: 1024px) {
+@media all and (min-width: 576px) and (max-width: 768px) {
 
     .tools-section {
         justify-content: center;
@@ -955,7 +956,7 @@
     }
 
     .item > h1 {
-        font-size: 16px;
+        font-size: 25px;
     }
 
     .item > h4 {
@@ -1039,7 +1040,6 @@
 
     .main-img-section {
         width: 100%;
-        height: 450px;
     }
 
     .services-list > div {
@@ -1060,7 +1060,7 @@
     }
 
     .input-group:nth-child(4) {
-        width: 335px;
+        width: 100%;
     }
 
     .input-group textarea::placeholder,
@@ -1088,52 +1088,225 @@
         width: 100%;
 
     }
+
+    .skill-line > :nth-child(2) {
+        display: block;
+        margin: 0;
+    }
 }
 
 
-/*@media all and (min-width: 769px) and (max-width: 1024px) {*/
-/*    .menu {*/
-/*        display: none;*/
-/*    }*/
+@media all and (min-width: 769px) and (max-width: 1024px) {
+    .tools-section {
+        justify-content: center;
+    }
 
-/*    .left-sidebar .portfolio {*/
-/*        width: 100%;*/
-/*    }*/
+    .menu {
+        display: none;
+    }
 
-/*    .left-sidebar {*/
-/*        max-width: 75vw;*/
-/*        position: relative;*/
-/*        left: 0;*/
-/*        top: 15px;*/
-/*        margin: auto;*/
-/*        transform: translateY(0);*/
-/*        padding: 50px;*/
-/*    }*/
+    .super-section > :first-child {
+        padding: 0 6rem;
+    }
 
-/*    .super-section > :first-child {*/
-/*        margin-left: 100px;*/
-/*    }*/
+    .left-sidebar {
+        /*max-width: 252px;*/
+        max-width: 75vw;
+        position: relative;
+        left: 0;
+        margin: auto;
+        top: 15px;
+        transform: translateY(0);
+    }
 
-/*    .main .go-to-project-btn {*/
-/*        margin-left: 630px;*/
-/*    }*/
+    .hello h2 {
+        font-size: 52px;
+    }
 
-/*    .certificate-img > img {*/
-/*        margin-left: 104px;*/
-/*    }*/
+    .hello h1 {
+        font-size: 72px;
+    }
 
-/*    .project-img > video {*/
-/*        margin-left: 60px;*/
-/*    }*/
+    .hello h3 {
+        font-size: 24px;
+    }
 
-/*    .project-img > h4 {*/
-/*        margin-left: 75px;*/
-/*    }*/
+    .hello h4 {
+        font-size: 22px;
+    }
 
-/*    .main-img-section {*/
-/*        margin-left: 36px;*/
-/*    }*/
-/*}*/
+    .main .go-to-project-btn {
+        margin-left: auto;
+    }
+
+    .count-section > h1 {
+        font-size: 82px;
+    }
+
+    .count-section > p {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .main-title > h2 {
+        font-size: 50px;
+    }
+
+    .main-title > h1 {
+        font-size: 60px;
+    }
+
+    .super-section {
+        padding: 60px 0;
+    }
+
+    .about > :last-child {
+        width: 100%;
+    }
+
+    .about > :last-child > p {
+        font-size: 22px;
+    }
+
+    .item > h1 {
+        font-size: 24px;
+    }
+
+    .item > h4 {
+        font-size: 18px;
+    }
+
+    .item {
+        padding-left: 62px;
+    }
+
+    .certificate-img {
+        width: 100%;
+    }
+
+    .skill-line > :last-child {
+        margin-top: 0;
+    }
+
+    .tools {
+        padding: 30px;
+    }
+
+    .tools-section > :first-child {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tools > img {
+        /*padding: 10px;*/
+        max-width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    .tools > h4 {
+        font-size: 14px;
+    }
+
+    .project-img > video {
+        width: 100%;
+    }
+
+    .project > :nth-child(3) {
+        width: 100%;
+    }
+
+    .project-img > h4 {
+        font-size: 15px;
+        margin-bottom: 34px;
+    }
+
+    .git-logo > i {
+        margin-left: 16px
+    }
+
+    .work {
+        width: 100%;
+        height: 150px;
+    }
+
+    .layer h3 {
+        font-size: 12px;
+    }
+
+    .layer a {
+        margin-top: 15px;
+        font-size: 20px;
+        bottom: 20px;
+    }
+
+    .assignment-list {
+        justify-content: center;
+    }
+
+    .assignment-list > section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 40px;
+    }
+
+    .main-img-section {
+        width: 100%;
+    }
+
+    .services-list > div {
+        width: 100%;
+    }
+
+    .services-list > div > h4 {
+        font-size: 13px;
+        margin-top: 20px;
+    }
+
+    .main-title > h4 {
+        font-size: 14px;
+    }
+
+    .input-group:nth-child(2) {
+        display: inline-block;
+    }
+
+    .input-group:nth-child(4) {
+        width: 100%;
+    }
+
+    .input-group textarea::placeholder,
+    .input-group input::placeholder {
+        font-size: 16px;
+    }
+
+    .input-group .submit-btn-wrap {
+        width: 100%;
+    }
+
+    .input-group {
+        width: 349px;
+    }
+
+    .certificate-img > div {
+        width: 75%;
+    }
+
+    .project-img {
+        width: 75%;
+    }
+
+    .main-certificate {
+        width: 100%;
+
+    }
+
+    .skill-line > :nth-child(2) {
+        display: block;
+        margin: 0;
+    }
+}
 
 @media all and (min-width: 2560px) {
     .super-section > :first-child {
