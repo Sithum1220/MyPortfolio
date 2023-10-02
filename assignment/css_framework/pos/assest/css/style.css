@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Josefin+Sans&family=Libre+Baskerville:wght@700&family=Petrona:wght@500&display=swap');
+
+
+header{
+    height: 60px;
+}
+.h5 {
+    font-family: "Libre Baskerville", sans-serif;
+    color: #0a58ca;
+}
+
+.search-btn {
+    color: #0a58ca;
+}
+
+.search-btn:hover {
+    background: #0a58ca;
+    color: #FFFFFF;
+}
+
+.super-section {
+    width: 16.7%;
+    height: 100vh;
+}
+
+h2 {
+    font-size: 22px;
+    text-align: center;
+    font-weight: 300;
+}
+
+i {
+    font-size: 25px;
+    padding-top: 3px;
+}
+
+.main-section{
+    height: 92.4%;
+    box-sizing: border-box;
+}
