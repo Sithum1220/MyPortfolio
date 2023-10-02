@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Borel&family=Josefin+Sans&family=Libre+Baskerville:wght@700&family=Petrona:wght@500&display=swap');
 
 
-header{
+header {
     height: 60px;
 }
+
 .h5 {
     font-family: "Libre Baskerville", sans-serif;
     color: #0a58ca;
@@ -35,7 +36,9 @@ i {
     padding-top: 3px;
 }
 
-.main-section{
+.main-section {
     height: 92.4%;
     box-sizing: border-box;
 }
+
+/**/
