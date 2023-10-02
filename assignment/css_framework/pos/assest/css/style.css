@@ -11,6 +11,7 @@ header{
 
 .search-btn {
     color: #0a58ca;
+    border: 1px solid #0a58ca;
 }
 
 .search-btn:hover {

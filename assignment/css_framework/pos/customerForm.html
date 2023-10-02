@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS FrameWork Pos</title>
+    <link href="assest/css/8.0.1_normalize.css" rel="stylesheet">
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link href="../../../assests/boostrap/css/bootstrap.css" rel="stylesheet">
+    <link href="assest/css/style.css" rel="stylesheet">
+    <link href="../../../assests/font-awesome-pro-5/css/all.css" rel="stylesheet">
+</head>
+<body>
+<header class="col col-lg-12 col-xl-10 position-absolute end-0 z-2">
+    <div class="container-fluid ">
+        <div class="row h-100">
+            <div class="col col-lg-12 col-xl-10 border border-1 position-fixed end-0 bg-body-tertiary">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="h5 navbar-brand" href="#">Pacific Pos System</a>
+                        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                                class="navbar-toggler" data-bs-target="#navbarSupportedContent"
+                                data-bs-toggle="collapse" type="button">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item d-block  d-xl-none">
+                                    <button class="btn btn-outline-secondary w-100 border border-0 d-flex pe-5 mb-3 gap-4"
+                                            type="button">
+                                        <i class="fal fa-user"></i>
+                                        <h2>Customer</h2>
+                                    </button>
+                                </li>
+                                <li class="nav-item d-block  d-xl-none">
+                                    <button class="btn btn-outline-secondary w-100 border border-0 d-flex  pe-5 gap-4 mb-3"
+                                            type="button">
+                                        <i class="fal fa-box"></i>
+                                        <h2>Item</h2>
+                                    </button>
+                                </li>
+                                <li class="nav-item dropdown d-block  d-xl-none">
+                                    <button class="btn btn-outline-secondary w-100 border border-0 d-flex pe-5 gap-4 mb-3"
+                                            type="button">
+                                        <i class="fal fa-cart-plus"></i>
+                                        <h2>Orders</h2>
+                                    </button>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <input aria-label="Search" class="form-control me-2" placeholder="Search" type="search">
+                                <button class="btn btn-outline-success search-btn" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="super-section border border-1 top-0 d-none d-lg-none d-xl-block">
+        <div>
+            <div class="d-flex justify-content-center pt-4 pb-5">
+                <img src="assest/img/logo.png" height="150" width="100"/>
+            </div>
+
+            <nav class="h-100 d-flex flex-column justify-content-center gap-5 p-4 pt-5">
+                <button class="btn btn-outline-secondary w-100 border border-0 d-flex pe-5 mb-3 gap-4" type="button">
+                    <i class="fal fa-user"></i>
+                    <h2>Customer</h2>
+                </button>
+                <button class="btn btn-outline-secondary w-100 border border-0 d-flex  pe-5 gap-4 mb-3" type="button">
+                    <i class="fal fa-box"></i>
+                    <h2>Item</h2>
+                </button>
+                <button class="btn btn-outline-secondary w-100 border border-0 d-flex pe-5 gap-4 mb-3" type="button">
+                    <i class="fal fa-cart-plus"></i>
+                    <h2>Orders</h2>
+                </button>
+            </nav>
+        </div>
+    </section>
+    <section class="main-section position-absolute end-0 bottom-0 col-12 col-lg-12 col-xl-10 p-4">
+        <div class="card">
+            <div class="card-header h4">
+                <img src="assest/img/icons8-customer-48.png" height="40" width="40"/>
+                Customer Details
+            </div>
+            <div class="card-body pt-0">
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg pt-3">
+                        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                    </div>
+                    <div class="col-12 col-md-12 col-lg pt-3">
+                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg pt-3">
+                        <input type="text" class="form-control" placeholder="Mobile Number" aria-label="Mobile Number">
+                    </div>
+                    <div class="col-12 col-md-12 col-lg pt-3">
+                        <input type="text" class="form-control" placeholder="NIC" aria-label="NIC">
+                    </div>
+                </div>
+
+                <div class="row">
+                <div class="col-12 col-md-12 col-lg pt-3">
+                    <input type="text" class="form-control" placeholder="City" aria-label="City">
+                </div>
+                <div class="col-12 col-md-12 col-lg pt-3">
+                    <input type="text" class="form-control" placeholder="Street" aria-label="Street">
+                </div>
+            </div>
+
+                <div class="d-flex justify-content-end">
+                    <div class="btn-group pt-3">
+                        <button href="#" class="btn btn-primary active">Save</button>
+                        <button href="#" class="btn btn-primary">Update</button>
+                        <button href="#" class="btn btn-primary">Delete</button>
+                    </div>
+                </div>
+
+                <div class="pt-4">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>bery</td>
+                            <td>@twitter</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Larry</td>
+                            <td>bery</td>
+                            <td>@twitter</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Larry</td>
+                            <td>bery</td>
+                            <td>@twitter</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>Larry</td>
+                            <td>bery</td>
+                            <td>@twitter</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-end p-0 m-0">
+                            <li class="page-item disabled">
+                                <a class="page-link">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="../../../assests/boostrap/js/bootstrap.js"></script>
+</body>
+</html>
