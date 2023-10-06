@@ -60,19 +60,19 @@
 <section class="super-section border border-1 top-0 d-none d-lg-none d-xl-block position-fixed">
     <div>
         <div class="d-flex justify-content-center pt-4 pb-5">
-            <img src="assest/img/logo.png" height="150" width="100"/>
+            <img id="imgID" src="assest/img/logo.png" height="150" width="100"/>
         </div>
 
         <nav class="h-100 d-flex flex-column justify-content-center gap-5 p-4 pt-5">
-            <button class="btn btn-outline-secondary w-100 border border-0 d-flex pe-5 mb-3 gap-4" type="button">
+            <button class="customer-btn btn btn-outline-secondary w-100 border border-0 d-flex pe-5 mb-3 gap-4" type="button">
                 <i class="fal fa-user"></i>
                 <h2>Customer</h2>
             </button>
-            <button class="btn btn-outline-secondary w-100 border border-0 d-flex  pe-5 gap-4 mb-3" type="button">
+            <button class="item-btn btn btn-outline-secondary w-100 border border-0 d-flex  pe-5 gap-4 mb-3" type="button">
                 <i class="fal fa-box"></i>
                 <h2>Item</h2>
             </button>
-            <button class="btn btn-outline-secondary w-100 border border-0 d-flex pe-5 gap-4 mb-3" type="button">
+            <button class="orders-btn btn btn-outline-secondary w-100 border border-0 d-flex pe-5 gap-4 mb-3" type="button">
                 <i class="fal fa-cart-plus"></i>
                 <h2>Orders</h2>
             </button>
@@ -125,7 +125,7 @@
     <section class="customer main-section position-absolute end-0 bottom-0 col-12 col-lg-12 col-xl-10 p-4">
         <div class="card">
             <div class="card-header h4">
-                <img src="../assest/img/icons8-customer-48.png" height="40" width="40"/>
+                <img src="../SPA/assest/img/icons8-customer-48.png" height="40" width="40"/>
                 Customer Details
             </div>
             <div class="card-body pt-0">
@@ -251,7 +251,7 @@
     <section class="item main-section position-absolute end-0 bottom-0 col-12 col-lg-12 col-xl-10 p-4">
         <div class="card">
             <div class="card-header h4">
-                <img src="../assest/img/icons8-item-48.png" height="40" width="40"/>
+                <img src="../SPA/assest/img/icons8-item-48.png" height="40" width="40"/>
                 Item Details
             </div>
             <div class="card-body pt-0">
@@ -369,8 +369,8 @@
     <section class="orders main-section position-absolute end-0 bottom-0 col-12 col-lg-12 col-xl-10 p-4">
         <div class="card">
             <div class="card-header h4">
-                <img src="../assest/img/icons8-item-48.png" height="40" width="40"/>
-                Item Details
+                <img src="../SPA/assest/img/icons8-order-48.png" height="40" width="40"/>
+                Order Details
             </div>
             <div class="card-body pt-0">
 
@@ -550,6 +550,40 @@
 <script src="../../../assests/boostrap/js/bootstrap.js"></script>
 <script src="assest/js/code.jquery.com_jquery-3.7.1.min.js"></script>
 
+<script>
+    var S = jQuery.noConflict();
 
+    S('.customer').css('display','none');
+    S('.item').css('display','none');
+    S('.orders').css('display','none');
+
+    S('.customer-btn').click(function (){
+        S('.dashboard').css('display','none');
+        S('.customer').css('display','block');
+        S('.item').css('display','none');
+        S('.orders').css('display','none');
+    });
+
+    S('.item-btn').click(function (){
+        S('.dashboard').css('display','none');
+        S('.customer').css('display','none');
+        S('.item').css('display','block');
+        S('.orders').css('display','none');
+    });
+
+    S('.orders-btn').click(function (){
+        S('.dashboard').css('display','none');
+        S('.customer').css('display','none');
+        S('.item').css('display','none');
+        S('.orders').css('display','block');
+    });
+
+    S('#imgID').click(function (){
+        S('.dashboard').css('display','block');
+        S('.customer').css('display','none');
+        S('.item').css('display','none');
+        S('.orders').css('display','none');
+    });
+</script>
 </body>
 </html>
