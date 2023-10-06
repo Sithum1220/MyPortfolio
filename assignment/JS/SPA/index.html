@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS SPA</title>
+    <link href="assest/css/8.0.1_normalize.css" rel="stylesheet">
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link href="../../../assests/boostrap/css/bootstrap.css" rel="stylesheet">
+    <link href="assest/css/style.css" rel="stylesheet">
+    <link href="../../../assests/font-awesome-pro-5/css/all.css" rel="stylesheet">
+</head>
+<body>
+<header class="col col-lg-12 col-xl-10 position-absolute end-0 z-2">
+    <div class="container-fluid ">
+        <div class="row h-100">
+            <div class="col col-lg-12 col-xl-10 border border-1 position-fixed end-0 bg-body-tertiary">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="h5 navbar-brand" href="#">Pacific Pos System</a>
+                        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                                class="navbar-toggler" data-bs-target="#navbarSupportedContent"
+                                data-bs-toggle="collapse" type="button">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item d-block  d-xl-none">
+                                    <button class="btn btn-outline-secondary w-100 border border-0 d-flex pe-5 mb-3 gap-4"
+                                            type="button">
+                                        <i class="fal fa-user"></i>
+                                        <h2>Customer</h2>
+                                    </button>
+                                </li>
+                                <li class="nav-item d-block  d-xl-none">
+                                    <button class="btn btn-outline-secondary w-100 border border-0 d-flex  pe-5 gap-4 mb-3"
+                                            type="button">
+                                        <i class="fal fa-box"></i>
+                                        <h2>Item</h2>
+                                    </button>
+                                </li>
+                                <li class="nav-item dropdown d-block  d-xl-none">
+                                    <button class="btn btn-outline-secondary w-100 border border-0 d-flex pe-5 gap-4 mb-3"
+                                            type="button">
+                                        <i class="fal fa-cart-plus"></i>
+                                        <h2>Orders</h2>
+                                    </button>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <input aria-label="Search" class="form-control me-2" placeholder="Search" type="search">
+                                <button class="btn btn-outline-success search-btn" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="super-section border border-1 top-0 d-none d-lg-none d-xl-block position-fixed">
+    <div>
+        <div class="d-flex justify-content-center pt-4 pb-5">
+            <img src="assest/img/logo.png" height="150" width="100"/>
+        </div>
+
+        <nav class="h-100 d-flex flex-column justify-content-center gap-5 p-4 pt-5">
+            <button class="btn btn-outline-secondary w-100 border border-0 d-flex pe-5 mb-3 gap-4" type="button">
+                <i class="fal fa-user"></i>
+                <h2>Customer</h2>
+            </button>
+            <button class="btn btn-outline-secondary w-100 border border-0 d-flex  pe-5 gap-4 mb-3" type="button">
+                <i class="fal fa-box"></i>
+                <h2>Item</h2>
+            </button>
+            <button class="btn btn-outline-secondary w-100 border border-0 d-flex pe-5 gap-4 mb-3" type="button">
+                <i class="fal fa-cart-plus"></i>
+                <h2>Orders</h2>
+            </button>
+        </nav>
+    </div>
+</section>
+
+
+<main >
+    <section class="dashboard main-section position-absolute end-0 bottom-0 col-12 col-lg-12 col-xl-10 p-4">
+        <div class="container-fluid">
+            <div class="row d-flex gap-5 justify-content-center">
+                <div class="col-8 col-sm-3 border border-1 rounded-4 d-flex justify-content-center gap-5 gap-sm-4 p-4 shadow flex-wrap">
+                    <img src="assest/img/customers.png" height="76" width="76"/>
+                    <div class="text-div">
+                        <h1 class="text-center fw-bold text-primary pb-0 m-0">85</h1>
+                        <h6 class="text-center opacity-25 m-0">All Customer</h6>
+                    </div>
+                </div>
+
+                <div class="col-8 col-sm-3 border border-1 rounded-4 d-flex justify-content-center gap-5 gap-sm-4 p-4 shadow flex-wrap">
+                    <img src="assest/img/items.png" height="76" width="76"/>
+                    <div class="text-div">
+                        <h1 class="text-center fw-bold text-primary pb-0 m-0">76</h1>
+                        <h6 class="text-center opacity-25 m-0">All Items</h6>
+                    </div>
+                </div>
+
+                <div class="col-8 col-sm-3 border border-1 rounded-4 d-flex justify-content-center gap-5 gap-sm-4 p-4 shadow flex-wrap">
+                    <img src="assest/img/orders.png" height="76" width="76"/>
+                    <div class="text-div">
+                        <h1 class="text-center fw-bold text-primary pb-0 m-0">92</h1>
+                        <h6 class="text-center opacity-25 m-0">All Orders</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="w-100 d-flex justify-content-center pt-5 d-none d-sm-block">
+            <div class="container-fluid ">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-10 border border-1 p-4">
+                        <img src="assest/img/chart.png"/></div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <section class="customer main-section position-absolute end-0 bottom-0 col-12 col-lg-12 col-xl-10 p-4">
+        <div class="card">
+            <div class="card-header h4">
+                <img src="../assest/img/icons8-customer-48.png" height="40" width="40"/>
+                Customer Details
+            </div>
+            <div class="card-body pt-0">
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg pt-3">
+                        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                    </div>
+                    <div class="col-12 col-md-12 col-lg pt-3">
+                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg pt-3">
+                        <input type="text" class="form-control" placeholder="Mobile Number" aria-label="Mobile Number">
+                    </div>
+                    <div class="col-12 col-md-12 col-lg pt-3">
+                        <input type="text" class="form-control" placeholder="NIC" aria-label="NIC">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg pt-3">
+                        <input type="text" class="form-control" placeholder="City" aria-label="City">
+                    </div>
+                    <div class="col-12 col-md-12 col-lg pt-3">
+                        <input type="text" class="form-control" placeholder="Street" aria-label="Street">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                    <div class="pt-1">
+                        <button type="button" class="btn btn-primary mt-3">Save</button>
+                        <button type="button" class="btn btn-primary mt-3">Update</button>
+                        <button type="button" class="btn btn-primary mt-3">Delete</button>
+                    </div>
+                </div>
+
+                <div class="table-responsive pt-4">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Mobile</th>
+                            <th scope="col">NIC</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Sithum Imesh</td>
+                            <td>Duwagoda Hikkaduwa</td>
+                            <td>0777524729</td>
+                            <td>200212703312</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Sithum Imesh</td>
+                            <td>Duwagoda Hikkaduwa</td>
+                            <td>0777524729</td>
+                            <td>200212703312</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Sithum Imesh</td>
+                            <td>Duwagoda Hikkaduwa</td>
+                            <td>0777524729</td>
+                            <td>200212703312</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Sithum Imesh</td>
+                            <td>Duwagoda Hikkaduwa</td>
+                            <td>0777524729</td>
+                            <td>200212703312</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Sithum Imesh</td>
+                            <td>Duwagoda Hikkaduwa</td>
+                            <td>0777524729</td>
+                            <td>200212703312</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>Sithum Imesh</td>
+                            <td>Duwagoda Hikkaduwa</td>
+                            <td>0777524729</td>
+                            <td>200212703312</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-content-end">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="item main-section position-absolute end-0 bottom-0 col-12 col-lg-12 col-xl-10 p-4">
+        <div class="card">
+            <div class="card-header h4">
+                <img src="../assest/img/icons8-item-48.png" height="40" width="40"/>
+                Item Details
+            </div>
+            <div class="card-body pt-0">
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg pt-3">
+                        <input type="text" class="form-control" placeholder="Item Description" aria-label="Item Description">
+                    </div>
+                    <div class="col-12 col-md-12 col-lg pt-3">
+                        <input type="text" class="form-control" placeholder="Item Catogory" aria-label="Item Catogory">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg pt-3">
+                        <input type="text" class="form-control" placeholder="Unit Price" aria-label="Unit Price">
+                    </div>
+                    <div class="col-12 col-md-12 col-lg pt-3">
+                        <input type="text" class="form-control" placeholder="QTY" aria-label="QTY">
+                    </div>
+                </div>
+
+
+                <div class="d-flex justify-content-end">
+                    <div class="pt-1">
+                        <button type="button" class="btn btn-primary mt-3">Save</button>
+                        <button type="button" class="btn btn-primary mt-3">Update</button>
+                        <button type="button" class="btn btn-primary mt-3">Delete</button>
+                    </div>
+                </div>
+
+                <div class="table-responsive pt-4">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Item Description</th>
+                            <th scope="col">Item Catogory</th>
+                            <th scope="col">Unit Price</th>
+                            <th scope="col">QTY</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-content-end">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="orders main-section position-absolute end-0 bottom-0 col-12 col-lg-12 col-xl-10 p-4">
+        <div class="card">
+            <div class="card-header h4">
+                <img src="../assest/img/icons8-item-48.png" height="40" width="40"/>
+                Item Details
+            </div>
+            <div class="card-body pt-0">
+
+                <section class="d-flex justify-content-center gap-5 flex-wrap flex-sm-wrap flex-md-nowrap">
+                    <div class="card mt-3 col-12 col-md-4 col-sm-12">
+                        <div class="card-header">
+                            Invoice Details
+                        </div>
+                        <div class="card-body pt-0">
+                            <div class="row">
+                                <div class="col-12 col-md-12 col-lg pt-3">
+                                    <label for="orderId" class="form-label ms-1">Order Id</label>
+                                    <input type="text" class="form-control" id="orderId" placeholder="Order Id" aria-label="Order Id">
+                                </div>
+                                <div class="col-12 col-md-12 col-lg pt-3">
+                                    <label for="orderId" class="form-label ms-1">Date</label>
+                                    <input type="text" class="form-control" id="date" placeholder="Date" aria-label="Date">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-12 col-lg pt-3">
+                                    <div class="col">
+                                        <label for="inputCustomerId" class="form-label">Customer Id</label>
+                                        <select id="inputCustomerId" class="form-select">
+                                            <option selected>Choose...</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12 col-lg pt-3">
+                                    <label for="orderId" class="form-label ms-1">Customer Name</label>
+                                    <input type="text" class="form-control" id="customer" placeholder="Customer name" aria-label="customerName">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-12 col-lg pt-3">
+                                <label for="orderId" class="form-label ms-1">Address</label>
+                                <input type="text" class="form-control" id="address" placeholder="Address" aria-label="Address">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-card card mt-3 d-inline-block col-12 col-md-4 col-sm-12">
+                        <div class="card-header">
+                            Item Select
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12 col-md-12 col-lg pt-3">
+                                    <div class="col">
+                                        <label for="inputItemCode" class="form-label">Item Id</label>
+                                        <select id="inputItemCode" class="form-select">
+                                            <option selected>Choose...</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12 col-lg pt-3">
+                                    <label for="orderId" class="form-label ms-1">Item Name</label>
+                                    <input type="text" class="form-control" id="itemName" placeholder="Item Name" aria-label="itemName">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-12 col-lg pt-3">
+                                    <label for="Price" class="form-label ms-1">Price</label>
+                                    <input type="text" class="form-control" id="price" placeholder="Price" aria-label="Price">
+                                </div>
+                                <div class="col-12 col-md-12 col-lg pt-3">
+                                    <label for="qtyOnHand" class="form-label ms-1">QTY On Hand</label>
+                                    <input type="text" class="form-control" id="qtyOnHand" placeholder="QTY On Hand" aria-label="qtyOnHand">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-12 col-lg pt-3">
+                                <label for="orderdQTY" class="form-label ms-1">Ordered QTY</label>
+                                <input type="text" class="form-control" id="orderdQTY" placeholder="Ordered QTY" aria-label="orderdQTY">
+                            </div>
+
+                            <div class="d-flex justify-content-end">
+                                <button type="button" class="btn btn-primary mt-3">Add Item</button>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="order-card card mt-3 d-inline-block col-12 col-md-3 col-sm-12">
+                        <div class="card-body">
+                            <label class="form-check-label h4 d-block mb-4">
+                                Total :
+                            </label>
+                            <label class="form-check-label h4 d-block mb-3">
+                                Sub Total :
+                            </label>
+
+                            <div class="row">
+                                <div class="col-12 col-md-12 col-lg pt-3">
+                                    <label for="cash" class="form-label ms-1">Cash</label>
+                                    <input type="text" class="form-control" id="cash" placeholder="Cash" aria-label="cash">
+                                </div>
+                                <div class="col-12 col-md-12 col-lg pt-3">
+                                    <label for="discount" class="form-label ms-1">Discount</label>
+                                    <input type="text" class="form-control" id="discount" placeholder="Discount" aria-label="discount">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg pt-3">
+                                <label for="balance" class="form-label ms-1">Balance</label>
+                                <input type="text" class="form-control" id="balance" placeholder="balance" aria-label="balance">
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-success mt-3">Add Item</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="table-responsive pt-4">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">Item Code</th>
+                            <th scope="col">Item Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">QTY</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                            <td>Sample</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-content-end">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+<script src="../../../assests/boostrap/js/bootstrap.js"></script>
+<script src="assest/js/code.jquery.com_jquery-3.7.1.min.js"></script>
+
+
+</body>
+</html>
