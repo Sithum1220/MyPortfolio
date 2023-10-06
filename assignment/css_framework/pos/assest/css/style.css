@@ -41,4 +41,7 @@ i {
     box-sizing: border-box;
 }
 
-/**/
+.text-div{
+    width: 100px;
+    height: 80px;
+}

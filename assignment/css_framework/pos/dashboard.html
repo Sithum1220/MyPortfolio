@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS FrameWork Pos</title>
+    <link href="assest/css/8.0.1_normalize.css" rel="stylesheet">
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link href="../../../assests/boostrap/css/bootstrap.css" rel="stylesheet">
+    <link href="assest/css/style.css" rel="stylesheet">
+    <link href="../../../assests/font-awesome-pro-5/css/all.css" rel="stylesheet">
+</head>
+<body>
+<header class="col col-lg-12 col-xl-10 position-absolute end-0 z-2">
+    <div class="container-fluid ">
+        <div class="row h-100">
+            <div class="col col-lg-12 col-xl-10 border border-1 position-fixed end-0 bg-body-tertiary">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="h5 navbar-brand" href="#">Pacific Pos System</a>
+                        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                                class="navbar-toggler" data-bs-target="#navbarSupportedContent"
+                                data-bs-toggle="collapse" type="button">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item d-block  d-xl-none">
+                                    <button class="btn btn-outline-secondary w-100 border border-0 d-flex pe-5 mb-3 gap-4"
+                                            type="button">
+                                        <i class="fal fa-user"></i>
+                                        <h2>Customer</h2>
+                                    </button>
+                                </li>
+                                <li class="nav-item d-block  d-xl-none">
+                                    <button class="btn btn-outline-secondary w-100 border border-0 d-flex  pe-5 gap-4 mb-3"
+                                            type="button">
+                                        <i class="fal fa-box"></i>
+                                        <h2>Item</h2>
+                                    </button>
+                                </li>
+                                <li class="nav-item dropdown d-block  d-xl-none">
+                                    <button class="btn btn-outline-secondary w-100 border border-0 d-flex pe-5 gap-4 mb-3"
+                                            type="button">
+                                        <i class="fal fa-cart-plus"></i>
+                                        <h2>Orders</h2>
+                                    </button>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <input aria-label="Search" class="form-control me-2" placeholder="Search" type="search">
+                                <button class="btn btn-outline-success search-btn" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="super-section border border-1 top-0 d-none d-lg-none d-xl-block position-fixed">
+    <div>
+        <div class="d-flex justify-content-center pt-4 pb-5">
+            <img src="assest/img/logo.png" height="150" width="100"/>
+        </div>
+
+        <nav class="h-100 d-flex flex-column justify-content-center gap-5 p-4 pt-5">
+            <button class="btn btn-outline-secondary w-100 border border-0 d-flex pe-5 mb-3 gap-4" type="button">
+                <i class="fal fa-user"></i>
+                <h2>Customer</h2>
+            </button>
+            <button class="btn btn-outline-secondary w-100 border border-0 d-flex  pe-5 gap-4 mb-3" type="button">
+                <i class="fal fa-box"></i>
+                <h2>Item</h2>
+            </button>
+            <button class="btn btn-outline-secondary w-100 border border-0 d-flex pe-5 gap-4 mb-3" type="button">
+                <i class="fal fa-cart-plus"></i>
+                <h2>Orders</h2>
+            </button>
+        </nav>
+    </div>
+</section>
+<main >
+    <section class="main-section position-absolute end-0 bottom-0 col-12 col-lg-12 col-xl-10 p-4">
+        <div class="container-fluid">
+            <div class="row d-flex gap-5 justify-content-center">
+                <div class="col-8 col-sm-3 border border-1 rounded-4 d-flex justify-content-center gap-5 gap-sm-4 p-4 shadow flex-wrap">
+                    <img src="assest/img/customers.png" height="76" width="76"/>
+                    <div class="text-div">
+                        <h1 class="text-center fw-bold text-primary pb-0 m-0">85</h1>
+                        <h6 class="text-center opacity-25 m-0">All Customer</h6>
+                    </div>
+                </div>
+
+                <div class="col-8 col-sm-3 border border-1 rounded-4 d-flex justify-content-center gap-5 gap-sm-4 p-4 shadow flex-wrap">
+                    <img src="assest/img/items.png" height="76" width="76"/>
+                    <div class="text-div">
+                        <h1 class="text-center fw-bold text-primary pb-0 m-0">76</h1>
+                        <h6 class="text-center opacity-25 m-0">All Items</h6>
+                    </div>
+                </div>
+
+                <div class="col-8 col-sm-3 border border-1 rounded-4 d-flex justify-content-center gap-5 gap-sm-4 p-4 shadow flex-wrap">
+                    <img src="assest/img/orders.png" height="76" width="76"/>
+                    <div class="text-div">
+                        <h1 class="text-center fw-bold text-primary pb-0 m-0">92</h1>
+                        <h6 class="text-center opacity-25 m-0">All Orders</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="w-100 d-flex justify-content-center pt-5 d-none d-sm-block">
+            <div class="container-fluid ">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-10 border border-1 p-4">
+                        <img src="assest/img/chart.png"/></div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+</main>
+<script src="../../../assests/boostrap/js/bootstrap.js"></script>
+</body>
+</html>
