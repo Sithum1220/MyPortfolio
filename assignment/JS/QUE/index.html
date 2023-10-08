@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QUE</title>
+  <link rel="stylesheet" href="css/8.0.1_normalize.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body{
+      background-color: black;
+    }
+    section{
+      width: 1000px;
+      height: 320px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+    }
+    section > div {
+      height: 100px;
+      flex-grow: 1;
+      border: 1px solid black;
+    }
+    section>div:first-child{
+      align-self: start;
+    }
+    section>div:last-child{
+      align-self: end;
+    }
+  </style>
+</head>
+<body>
+<section>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</section>
+<script>
+  let colors =["red","yellow","green","blue","deeppink","orange"];
+  let divArray = document.querySelector("section").children;
+
+  setInterval(function (){
+    for(let i=0; i<divArray.length; i++){
+      divArray[i].style.background=colors[i];
+    }
+    let element =colors.pop();
+    colors.unshift(element)
+  },400);
+
+</script>
+</body>
+</html>
