@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .page-loader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10000;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-loader .bounceball {
+            position: relative;
+            display: inline-block;
+            height: 37px;
+            width: 15px;
+        }
+
+        .page-loader .bounceball:before {
+            position: absolute;
+            content: '';
+            display: block;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #fff;
+            transform-origin: 50%;
+            animation: bounceLoader 500ms alternate infinite ease;
+        }
+    </style>
+</head>
+<body>
+<div class="page-loader">
+    <div class="bounceball"></div>
+</div>
+<script src="assests/js/code.jquery.com_jquery-3.7.1.min.js"></script>
+
+<script>
+
+        $('.page-loader').delay('500').fadeOut(1000);
+</script>
+</body>
+</html>

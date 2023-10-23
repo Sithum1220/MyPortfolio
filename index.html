@@ -28,11 +28,16 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
     <link href="assests/css/ResponsiveStyle.css" rel="stylesheet">
 
+
 </head>
 <body>
+
 <video autoplay="" class="body-overlay" loop="" muted="">
     <source src="assests/images/backgroud.mp4" type="video/mp4">
 </video>
+<div class="page-loader">
+    <div class="bounceball"></div>
+</div>
 <ul class="menu">
     <li>
         <a href="#introduc">
@@ -619,5 +624,11 @@
         </section>
     </section>
 </main>
+<script src="assignment/JS/SPA/assest/js/code.jquery.com_jquery-3.7.1.min.js"></script>
+<script>
+    $(window).on('load', function () {
+        $('.page-loader').delay('500').fadeOut(1000);
+    });
+</script>
 </body>
 </html>
