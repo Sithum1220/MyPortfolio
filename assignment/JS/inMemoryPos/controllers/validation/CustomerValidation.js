@@ -49,8 +49,9 @@ function checkAll() {
 
 focusNextTextFeild();
 setBtn();
+
 function focusNextTextFeild() {
-    S('#customerId,#customerName,#customerMobile,#customerCity,#customerStreet,#customerNIC').on('keydown keyup', function (e) {
+    S('#customerId,#customerName,#customerMobile,#customerCity,#customerStreet,#customerNIC').on('keyup', function (e) {
         let indexNo = c_vArray.indexOf(c_vArray.find((c) => c.field.attr("id") == e.target.id));
 
         if (e.key == "Tab") {
@@ -79,8 +80,9 @@ function focusNextTextFeild() {
                 S('#customerStreet').focus();
             }
 
-            if (checkAll()){
-                saveCustomer();
+            if (checkAll()) {
+                S("#customerId").focus();
+                S('#btn-save').click();
             }
 
         }

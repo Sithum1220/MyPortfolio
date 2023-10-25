@@ -26,13 +26,11 @@ S('#btn-save').click(function () {
 function saveCustomer() {
         let customerIds = S('#customerId').val();
         if (searchExistCustomer(customerIds.trim())) {
-            // Swal.fire({
-            //     icon: 'error',
-            //     title: 'Oops...',
-            //     text: 'This Customer Already Exist.'
-            // });
-
-            alert('already exist')
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'This Customer Already Exist.'
+            });
         } else {
             getAllCustomerForTextFeild();
             let newCustomer = Object.assign({}, customer);
