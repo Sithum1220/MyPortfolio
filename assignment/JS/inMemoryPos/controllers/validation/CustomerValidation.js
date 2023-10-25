@@ -5,6 +5,7 @@ const CUS_STREET_REGEX = /^[A-Za-z0-9 ]{8,}$/;
 const CUS_MOBILE_REGEX = /^[0]{1}[7]{1}[01245678]{1}[0-9]{7}$/;
 const CUS_NIC_REGEX = /^(([5,6,7,8,9]{1})([0-9]{1})([0,1,2,3,5,6,7,8]{1})([0-9]{6})([v|V|x|X]))|(([1,2]{1})([0,9]{1})([0-9]{2})([0,1,2,3,5,6,7,8]{1})([0-9]{7}))/;
 let cusId;
+
 let c_vArray = new Array();
 c_vArray.push({field: S("#customerId"), regEx: CUS_ID_REGEX});
 c_vArray.push({field: S("#customerName"), regEx: CUS_NAME_REGEX});
@@ -42,7 +43,9 @@ function setBorder(bol, ob) {
 
 function checkAll() {
     for (let i = 0; i < c_vArray.length; i++) {
-        if (!checkValidation(c_vArray[i])) return false;
+        if (!checkValidation(c_vArray[i])) {
+            return false;
+        }
     }
     return true;
 }
@@ -91,8 +94,6 @@ function focusNextTextFeild() {
                     S('#btn-save').click();
                 }
             }
-
-
         }
         setBtn();
     });

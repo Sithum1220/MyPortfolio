@@ -59,6 +59,7 @@ function saveCustomer() {
             clearCustomerInputFields();
             setDataTableToTextFeild();
             doubleClick();
+            S('#search').val("");
         }
 }
 
@@ -103,7 +104,7 @@ function setDataTableToTextFeild() {
         selectedId = S('#customerId').val();
         setId(id);
        setBtn();
-
+        S('#search').val("");
     });
 }
 
@@ -146,6 +147,8 @@ function updateCustomer() {
             S('#customerId').prop('disabled', false);
             setDataTableToTextFeild();
             doubleClick();
+            S('#search').val("");
+
         } else if (result.isDenied) {
             Swal.fire('Changes are not saved', '', 'info')
         }
@@ -193,6 +196,7 @@ function deleteCustomer() {
             setDataTableToTextFeild();
             doubleClick();
             disableTextFeild(false);
+            S('#search').val("");
         }
     })
 }
@@ -201,12 +205,33 @@ S('#btn-cleartable').click(function () {
     S('#tBody').empty();
     clearCustomerInputFields();
     disableTextFeild(false);
+    S('#search').val("");
 });
 
 S('#btn-getAll').click(function () {
     loadDataTable();
     setDataTableToTextFeild();
     doubleClick();
+    S('#search').val("");
 });
+
+searchCustomer();
+function searchCustomer(){
+    S('#search').on('keyup',function () {
+        S('#tBody').empty();
+        let index = -1;
+
+        for (let customerObj of customerDB) {
+            if (customerObj.id == S('#search').val()){
+                index = customerDB.indexOf(customerObj);
+            }
+        }
+            var row = `<tr><td>${customerDB[index].id}</td><td>${customerDB[index].name}</td><td>${customerDB[index].address}</td><td>${customerDB[index].mobile}</td><td>${customerDB[index].nic}</td></tr>`;
+            S('#tBody').append(row)
+        setDataTableToTextFeild();
+        doubleClick();
+    });
+
+}
 
 
