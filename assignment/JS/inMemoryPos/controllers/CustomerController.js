@@ -1,4 +1,4 @@
-saveCustomer();
+
 let customerId;
 let customerName;
 let customerMobile;
@@ -6,9 +6,6 @@ let customerCity;
 let customerStreet;
 let customerNIC;
 
-S(window).on('load', function () {
-    S("#btn-save").prop("disabled", true);
-});
 
 function getAllCustomerForTextFeild() {
     customerId = S('#customerId').val();
@@ -19,15 +16,23 @@ function getAllCustomerForTextFeild() {
     customerNIC = S('#customerNIC').val();
 }
 
+S('#btn-save').click(function () {
+    if (checkAll()){
+        saveCustomer();
+    }else{
+        alert("Error");
+    }
+});
 function saveCustomer() {
-    S('#btn-save').click(function () {
         let customerIds = S('#customerId').val();
         if (searchExistCustomer(customerIds.trim())) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'This Customer Already Exist.'
-            });
+            // Swal.fire({
+            //     icon: 'error',
+            //     title: 'Oops...',
+            //     text: 'This Customer Already Exist.'
+            // });
+
+            alert('already exist')
         } else {
             getAllCustomerForTextFeild();
             let newCustomer = Object.assign({}, customer);
@@ -49,9 +54,8 @@ function saveCustomer() {
             })
 
             loadDataTable();
-            setDataTextFeild("", "", "", "", "", "");
+            clearCustomerInputFields();
         }
-    });
 }
 
 function searchExistCustomer(id) {

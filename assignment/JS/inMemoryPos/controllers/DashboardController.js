@@ -10,6 +10,7 @@ S('.customer-btn').click(function (){
     S('.item').css('display','none');
     S('.orders').css('display','none');
     S('#customerId').focus();
+
 });
 
 S('.item-btn').click(function (){
