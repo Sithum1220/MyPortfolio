@@ -1,11 +1,14 @@
 saveCustomer();
-
 let customerId;
 let customerName;
 let customerMobile;
 let customerCity;
 let customerStreet;
 let customerNIC;
+
+S(window).on('load', function () {
+    S("#btn-save").prop("disabled", true);
+});
 
 function getAllCustomerForTextFeild() {
     customerId = S('#customerId').val();
@@ -46,7 +49,7 @@ function saveCustomer() {
             })
 
             loadDataTable();
-            setDataTextFeild("","","","","","");
+            setDataTextFeild("", "", "", "", "", "");
         }
     });
 }
@@ -73,3 +76,5 @@ function setDataTextFeild(id, name, mobile, nic, city, street) {
     S('#customerStreet').val(city);
     S('#customerNIC').val(street);
 }
+
+
