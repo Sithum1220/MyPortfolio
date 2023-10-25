@@ -4,7 +4,7 @@ const CUS_CITY_REGEX = /^[A-Za-z ]{5,}$/;
 const CUS_STREET_REGEX = /^[A-Za-z0-9 ]{8,}$/;
 const CUS_MOBILE_REGEX = /^[0]{1}[7]{1}[01245678]{1}[0-9]{7}$/;
 const CUS_NIC_REGEX = /^(([5,6,7,8,9]{1})([0-9]{1})([0,1,2,3,5,6,7,8]{1})([0-9]{6})([v|V|x|X]))|(([1,2]{1})([0,9]{1})([0-9]{2})([0,1,2,3,5,6,7,8]{1})([0-9]{7}))/;
-
+let cusId;
 let c_vArray = new Array();
 c_vArray.push({field: S("#customerId"), regEx: CUS_ID_REGEX});
 c_vArray.push({field: S("#customerName"), regEx: CUS_NAME_REGEX});
@@ -80,10 +80,18 @@ function focusNextTextFeild() {
                 S('#customerStreet').focus();
             }
 
-            if (checkAll()) {
-                S("#customerId").focus();
-                S('#btn-save').click();
+            if (searchExistCustomer(cusId)){
+                if (checkAll()) {
+                    S("#customerId").focus();
+                    S('#btn-update').click();
+                }
+            }else {
+                if (checkAll()) {
+                    S("#customerId").focus();
+                    S('#btn-save').click();
+                }
             }
+
 
         }
         setBtn();
@@ -93,11 +101,18 @@ function focusNextTextFeild() {
 
 function setBtn() {
     S("#btn-save").prop("disabled", true);
+
     if (checkAll()) {
         S("#btn-save").prop("disabled", false);
+        S("#btn-update").prop("disabled", false);
     } else {
         S("#btn-save").prop("disabled", true);
+        S("#btn-update").prop("disabled", true);
     }
+}
+
+function setId(id) {
+    cusId = id;
 }
 
 function clearCustomerInputFields() {
