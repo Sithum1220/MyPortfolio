@@ -10,7 +10,8 @@ S('.customer-btn').click(function (){
     S('.item').css('display','none');
     S('.orders').css('display','none');
     S('#customerId').focus();
-
+    S('#search').off('keyup');
+    searchCustomer();
 });
 
 S('.item-btn').click(function (){
@@ -18,6 +19,8 @@ S('.item-btn').click(function (){
     S('.customer').css('display','none');
     S('.item').css('display','block');
     S('.orders').css('display','none');
+    S('#search').off('keyup');
+    searchItem();
 });
 
 S('.orders-btn').click(function (){

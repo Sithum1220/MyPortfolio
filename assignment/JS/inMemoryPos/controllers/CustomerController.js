@@ -253,8 +253,9 @@ S('#btn-getAll').click(function () {
     S('#search').val("");
 });
 
-searchCustomer();
-
+// S('#search').on('click',function () {
+//     searchCustomer();
+// });
 function searchCustomer() {
     S('#search').on('keyup', function () {
         S('#tBody').empty();

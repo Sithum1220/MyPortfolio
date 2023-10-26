@@ -197,30 +197,35 @@ function deleteItem() {
 }
 
 S('#btn-cleartable-item').click(function () {
-    S('#tBody').empty();
-    clearCustomerInputFields();
-    disableTextFeild(false);
+    S('#tBody-item').empty();
+    clearItemInputFields();
+    disableItemTextFeild(false);
     S('#search').val("");
 });
 
 S('#btn-getAll-item').click(function () {
-    loadDataTable();
-    setDataTableToTextFeild();
+    loadItemDataTable();
+    setItemDataTableToTextFeild();
     itemRowdoubleClick();
     S('#search').val("");
 });
 
-S('#search').on('keyup', function () {
-    S('#tBody-item').empty();
-    let index = -1;
+// S('#search').on('click',function () {
+//     searchItem();
+// });
+function searchItem() {
+    S('#search').on('keyup', function () {
+        S('#tBody-item').empty();
+        let index = -1;
 
-    for (let itemObj of itemDB) {
-        if (itemObj.id == S('#search').val()) {
-            index = itemDB.indexOf(itemObj);
+        for (let itemObj of itemDB) {
+            if (itemObj.id == S('#search').val()) {
+                index = itemDB.indexOf(itemObj);
+            }
         }
-    }
-    var row = `<tr><td>${itemDB[index].id}</td><td>${itemDB[index].description}</td><td>${itemDB[index].category}</td><td>${itemDB[index].unitPrice}</td><td>${itemDB[index].qty}</td></tr>`;
-    S('#tBody-item').append(row)
-    setItemDataTableToTextFeild();
-    itemRowdoubleClick();
-});
+        var row = `<tr><td>${itemDB[index].id}</td><td>${itemDB[index].description}</td><td>${itemDB[index].category}</td><td>${itemDB[index].unitPrice}</td><td>${itemDB[index].qty}</td></tr>`;
+        S('#tBody-item').append(row)
+        setItemDataTableToTextFeild();
+        itemRowdoubleClick();
+    });
+}
