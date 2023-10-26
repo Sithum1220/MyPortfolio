@@ -1,4 +1,3 @@
-
 let customerId;
 let customerName;
 let customerMobile;
@@ -7,10 +6,11 @@ let customerStreet;
 let customerNIC;
 let selectedId;
 
-S(window).on('load',function () {
+S(window).on('load', function () {
     S("#btn-update").prop("disabled", true);
     S("#btn-delete").prop("disabled", true);
 });
+
 function getAllCustomerForTextFeild() {
     customerId = S('#customerId').val();
     customerName = S('#customerName').val();
@@ -21,51 +21,85 @@ function getAllCustomerForTextFeild() {
 }
 
 S('#btn-save').click(function () {
-    if (checkAll()){
+    if (checkAll()) {
         saveCustomer();
-    }else{
+    } else {
         alert("Error");
     }
 });
+
 function saveCustomer() {
-        let customerIds = S('#customerId').val();
-        if (searchExistCustomer(customerIds.trim())) {
+    getAllCustomerForTextFeild();
+    let customerIds = S('#customerId').val();
+    if (searchExistCustomer(customerIds.trim())) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'This Customer Already Exist.'
+        });
+    } else {
+        let mobileNum = S('#customerMobile').val();
+        if (searchExistCustomerMobile(mobileNum.trim())){
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'This Customer Already Exist.'
+                text: 'This Customer Mobile Number Already Exist.'
             });
-        } else {
-            getAllCustomerForTextFeild();
-            let newCustomer = Object.assign({}, customer);
+        }else {
+            let nic = S('#customerNIC').val();
 
-            newCustomer.id = customerId;
-            newCustomer.name = customerName;
-            newCustomer.mobile = customerMobile;
-            newCustomer.nic = customerNIC;
-            newCustomer.address = customerStreet + ", " + customerCity;
+            if (searchExistCustomerNIC(nic.trim())){
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'This Customer NIC Already Exist.'
+                });
+            }else {
+                let newCustomer = Object.assign({}, customer);
 
-            customerDB.push(newCustomer);
+                newCustomer.id = customerId;
+                newCustomer.name = customerName;
 
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Customer has been saved',
-                showConfirmButton: false,
-                timer: 1500
-            })
+                newCustomer.mobile = customerMobile;
+                newCustomer.nic = customerNIC;
+                newCustomer.address = customerStreet + ", " + customerCity;
 
-            loadDataTable();
-            clearCustomerInputFields();
-            setDataTableToTextFeild();
-            doubleClick();
-            S('#search').val("");
+                customerDB.push(newCustomer);
+
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Customer has been saved',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+
+                loadDataTable();
+                clearCustomerInputFields();
+                setDataTableToTextFeild();
+                doubleClick();
+                S('#search').val("");
+            }
         }
+
+    }
 }
 
 function searchExistCustomer(id) {
     return customerDB.find(function (customer) {
         return customer.id == id;
+    });
+}
+
+function searchExistCustomerMobile(mobile) {
+    return customerDB.find(function (customer) {
+        return customer.mobile == mobile;
+    });
+}
+
+function searchExistCustomerNIC(nic) {
+    return customerDB.find(function (customer) {
+        return customer.nic == nic;
     });
 }
 
@@ -88,34 +122,35 @@ function setDataTextFeild(id, name, mobile, nic, city, street) {
 
 function setDataTableToTextFeild() {
     S('#tBody > tr').click(function () {
-       let id =  S(this).children(':eq(0)').text();
-       let name = S(this).children(':eq(1)').text();
-       let address = S(this).children(':eq(2)').text();
-       let mobile = S(this).children(':eq(3)').text();
-       let nic = S(this).children(':eq(4)').text();
+        let id = S(this).children(':eq(0)').text();
+        let name = S(this).children(':eq(1)').text();
+        let address = S(this).children(':eq(2)').text();
+        let mobile = S(this).children(':eq(3)').text();
+        let nic = S(this).children(':eq(4)').text();
 
-       let splitAddress = address.split(',')
+        let splitAddress = address.split(',')
 
         let street = splitAddress[0];
         let city = splitAddress[1];
 
-       setDataTextFeild(id,name,mobile,nic,city,street);
+        setDataTextFeild(id, name, mobile, nic, city, street);
         S('#customerId').prop('disabled', true);
         selectedId = S('#customerId').val();
-        setId(id);
-       setBtn();
+        // setId(id);
+        setBtn();
         S('#search').val("");
     });
 }
 
 S('#btn-update').click(function () {
 
-   if (checkAll()){
-       updateCustomer();
-   } else {
-       alert('error');
-   }
+    if (checkAll()) {
+        updateCustomer();
+    } else {
+        alert('error');
+    }
 });
+
 function updateCustomer() {
     getAllCustomerForTextFeild();
     Swal.fire({
@@ -132,14 +167,14 @@ function updateCustomer() {
             let index = -1;
 
             for (let customerObj of customerDB) {
-                if (customerObj.id == selectedId){
+                if (customerObj.id == selectedId) {
                     index = customerDB.indexOf(customerObj);
                 }
             }
 
             customerDB[index].id = customerId;
             customerDB[index].name = customerName;
-            customerDB[index].address = customerStreet+", "+customerCity;
+            customerDB[index].address = customerStreet + ", " + customerCity;
             customerDB[index].mobile = customerMobile;
             customerDB[index].nic = customerNIC;
             loadDataTable();
@@ -156,24 +191,27 @@ function updateCustomer() {
 }
 
 function disableTextFeild(condition) {
-    S('#customerId').prop('disabled',condition);
-    S('#customerName').prop('disabled',condition);
-    S('#customerMobile').prop('disabled',condition);
-    S('#customerCity').prop('disabled',condition);
-    S('#customerStreet').prop('disabled',condition);
-    S('#customerNIC').prop('disabled',condition);
+    S('#customerId').prop('disabled', condition);
+    S('#customerName').prop('disabled', condition);
+    S('#customerMobile').prop('disabled', condition);
+    S('#customerCity').prop('disabled', condition);
+    S('#customerStreet').prop('disabled', condition);
+    S('#customerNIC').prop('disabled', condition);
 }
+
 function doubleClick() {
-    S('#tBody > tr').on('dblclick',function () {
+    S('#tBody > tr').on('dblclick', function () {
         disableTextFeild(true);
         S("#btn-delete").prop("disabled", false);
         S("#btn-save").prop("disabled", true);
         S("#btn-update").prop("disabled", true);
     });
 }
+
 S('#btn-delete').click(function () {
     deleteCustomer();
 });
+
 function deleteCustomer() {
     Swal.fire({
         title: 'Are you sure?',
@@ -190,7 +228,7 @@ function deleteCustomer() {
                 'Your file has been deleted.',
                 'success'
             )
-            customerDB.splice(selectedId,1);
+            customerDB.splice(selectedId, 1);
             loadDataTable();
             clearCustomerInputFields();
             setDataTableToTextFeild();
@@ -216,18 +254,19 @@ S('#btn-getAll').click(function () {
 });
 
 searchCustomer();
-function searchCustomer(){
-    S('#search').on('keyup',function () {
+
+function searchCustomer() {
+    S('#search').on('keyup', function () {
         S('#tBody').empty();
         let index = -1;
 
         for (let customerObj of customerDB) {
-            if (customerObj.id == S('#search').val()){
+            if (customerObj.id == S('#search').val()) {
                 index = customerDB.indexOf(customerObj);
             }
         }
-            var row = `<tr><td>${customerDB[index].id}</td><td>${customerDB[index].name}</td><td>${customerDB[index].address}</td><td>${customerDB[index].mobile}</td><td>${customerDB[index].nic}</td></tr>`;
-            S('#tBody').append(row)
+        var row = `<tr><td>${customerDB[index].id}</td><td>${customerDB[index].name}</td><td>${customerDB[index].address}</td><td>${customerDB[index].mobile}</td><td>${customerDB[index].nic}</td></tr>`;
+        S('#tBody').append(row)
         setDataTableToTextFeild();
         doubleClick();
     });
