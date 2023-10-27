@@ -290,8 +290,8 @@ S('#discount').on('keyup', function () {
 });
 
 function searchExistOrder(id) {
-    return orderDB.find(function (purchersOrder) {
-        return purchersOrder.oid == id;
+    return orderDB.find(function (order) {
+        return order.oid == id;
     });
 }
 
