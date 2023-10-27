@@ -204,10 +204,8 @@ function orderAddToCart() {
         orderDetail.code = orderedItemId;
 
         if (searchExistCartItem(orderedItemId)) {
-            alert('if')
                 getDataByItemID(order.orderDetails, orderedItemId).qty = parseInt(getDataByItemID(order.orderDetails, orderedItemId).qty) + parseInt(orderQty);
         } else {
-            alert('else')
             order.orderDetails.push(orderDetail);
         }
 
