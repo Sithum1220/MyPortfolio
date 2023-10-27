@@ -105,13 +105,15 @@ S('#btn-add-item').click(function () {
             S('#dateSpan').css('display', 'block');
             S('#date').css('border', '1px solid red');
         }
-        if (S('#inputItemCode').val() != 'Choose...' && S('#inputCustomerId').val() != 'Choose...' && S('#date').val() != ''){
-           orderAddToCart();
+        if (S('#inputItemCode').val() != 'Choose...' && S('#inputCustomerId').val() != 'Choose...' && S('#date').val() != '') {
+            orderAddToCart();
         }
     } else {
         alert('error');
     }
 });
+
+S()
 
 function orderAddToCart() {
     orderID = S('#orderId').val();
@@ -137,14 +139,20 @@ function orderAddToCart() {
         order.orderDetails.push(orderDetail);
     }
 
-    let total = parseInt(getDataByItemID(order.orderDetails, orderedItemId).qty) * price;
+    // let total = parseInt(getDataByItemID(order.orderDetails, orderedItemId).qty) * price;
+
+    let total = 0;
     S('#tBody-order').empty();
     for (let orderElement of order.orderDetails) {
-        var row = `<tr><td>${orderElement.code}</td><td>${getDataById(itemDB, orderElement.code).description}</td><td>${order.date}</td><td>${orderElement.unitPrice}</td><td>${orderElement.qty}</td><td>${total}</td></tr>`;
+        var row = `<tr><td>${orderElement.code}</td><td>${getDataById(itemDB, orderElement.code).description}</td><td>${order.date}</td><td>${orderElement.unitPrice}</td><td>${orderElement.qty}</td><td>${parseInt(orderElement.unitPrice) * parseInt(orderElement.qty)}</td></tr>`;
         S('#tBody-order').append(row)
-    }
 
+        total += parseInt(orderElement.unitPrice) * parseInt(orderElement.qty);
+    }
+    S('#totalSpan').text(total);
+    S('#subTotalSpan').text(total);
     S('#orderdQTY').val('');
+    setBtnOrder();
 }
 
 function getDataById(arr, id) {

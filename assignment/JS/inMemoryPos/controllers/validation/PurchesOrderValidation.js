@@ -1,17 +1,30 @@
 const ORDER_ID_REGEX = /^(OR00-)[0-9]{3}$/;
-// const PRICE_REGEX = /^[0-9]{2,}([.][0-9]{2})?$/;
+const PRICE_REGEX = /^[0-9]{2,}([.][0-9]{2})?$/;
 const QTY_REGEX = /[0-9]{1,9}/;
 
 let o_vArray = new Array();
+let place_order_vArray = new Array();
 o_vArray.push({field: S("#orderId"), regEx: ORDER_ID_REGEX});
-// o_vArray.push({field: S("#price"), regEx: PRICE_REGEX});
 o_vArray.push({field: S("#orderdQTY"), regEx: QTY_REGEX});
+
+place_order_vArray.push({field: S("#cash"), regEx: PRICE_REGEX});
+place_order_vArray.push({field: S("#discount"), regEx: PRICE_REGEX});
 
 S(window).on('load', function () {
     S("#btn-add-item").prop("disabled", true);
+    S("#btn-placeOrder").prop("disabled", true);
 });
 
 function checkOrderValidation(object) {
+    if (object.regEx.test(object.field.val())) {
+        setOrderTextBorder(true, object);
+        return true;
+    }
+    setOrderTextBorder(false, object);
+    return false;
+}
+
+function checkPlacOrdereValidation(object) {
     if (object.regEx.test(object.field.val())) {
         setOrderTextBorder(true, object);
         return true;
@@ -45,8 +58,19 @@ function checkAllOrderReg() {
     return true;
 }
 
+function checkAllPlaceOrderReg() {
+    for (let i = 0; i < place_order_vArray.length; i++) {
+        if (!checkPlacOrdereValidation(place_order_vArray[i])) {
+            return false;
+        }
+    }
+    return true;
+}
+
 focusNextOrderTextFeild();
 setBtnOrder();
+setBtnPlaceOrder()
+focusNextPlaceOrderTextFeild();
 
 function focusNextOrderTextFeild() {
     S('#orderdQTY,#orderId').on('keyup', function (e) {
@@ -76,6 +100,34 @@ function focusNextOrderTextFeild() {
     });
 }
 
+function focusNextPlaceOrderTextFeild() {
+    S('#cash,#discount').on('keyup', function (e) {
+        let indexNo = place_order_vArray.indexOf(place_order_vArray.find((c) => c.field.attr("id") == e.target.id));
+
+        if (e.key == "Tab") {
+            e.preventDefault();
+        }
+        let checker = checkOrderValidation(place_order_vArray[indexNo]);
+
+        if (e.key == "Enter") {
+
+
+            // if (searchExistItem(selectedItemId)){
+            //     if (checkAllItemReg()) {
+            //         S("#itemId").focus();
+            //         S('#btn-update-item').click();
+            //     }
+            // }else {
+            //     if (checkAllItemReg()) {
+            //         S("#itemId").focus();
+            //         S('#btn-save-item').click();
+            //     }
+            // }
+        }
+        setBtnPlaceOrder();
+    });
+}
+
 function setBtnOrder() {
 
     if (checkAllOrderReg() && parseInt(S('#orderdQTY').val()) <= parseInt(S('#qtyOnHand').val())) {
@@ -83,6 +135,16 @@ function setBtnOrder() {
 
     } else {
         S("#btn-add-item").prop("disabled", true);
+    }
+}
+
+function setBtnPlaceOrder() {
+
+    if (checkAllPlaceOrderReg() && checkAllOrderReg()) {
+        S("#btn-placeOrder").prop("disabled", false);
+
+    } else {
+        S("#btn-placeOrder").prop("disabled", true);
     }
 }
 
