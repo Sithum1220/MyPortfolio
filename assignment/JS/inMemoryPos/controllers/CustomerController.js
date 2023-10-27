@@ -78,6 +78,7 @@ function saveCustomer() {
                 clearCustomerInputFields();
                 setDataTableToTextFeild();
                 doubleClick();
+                setCustomerId();
                 S('#search').val("");
             }
         }

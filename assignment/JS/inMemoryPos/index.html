@@ -304,7 +304,8 @@
                                 </div>
                                 <div class="col-12 col-md-12 col-lg pt-3">
                                     <label for="orderId" class="form-label ms-1">Date</label>
-                                    <input type="text" class="form-control" id="date" placeholder="Date" aria-label="Date">
+                                    <input type="date" class="form-control" id="date" placeholder="Date" aria-label="Date">
+                                    <span class="txtspan" id="dateSpan">Please set date</span>
                                 </div>
                             </div>
 
@@ -313,20 +314,21 @@
                                     <div class="col">
                                         <label for="inputCustomerId" class="form-label">Customer Id</label>
                                         <select id="inputCustomerId" class="form-select">
-                                            <option selected>Choose...</option>
-                                            <option>...</option>
+                                            <option  selected>Choose...</option>
+
                                         </select>
+                                        <span class="txtspan" id="cusIdSpan">Please choose customer id</span>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-12 col-lg pt-3">
                                     <label for="orderId" class="form-label ms-1">Customer Name</label>
-                                    <input type="text" class="form-control" id="customer" placeholder="Customer name" aria-label="customerName">
+                                    <input type="text" class="form-control" id="OrderedCustomerName" placeholder="Customer name" aria-label="customerName">
                                 </div>
                             </div>
 
                             <div class="col-12 col-md-12 col-lg pt-3">
                                 <label for="orderId" class="form-label ms-1">Address</label>
-                                <input type="text" class="form-control" id="address" placeholder="Address" aria-label="Address">
+                                <input type="text" class="form-control" id="OrderedCustomerAddress" placeholder="Address" aria-label="Address">
                             </div>
                         </div>
                     </div>
@@ -344,11 +346,12 @@
                                             <option selected>Choose...</option>
                                             <option>...</option>
                                         </select>
+                                        <span class="txtspan" id="itemIdSpan">Please choose item id</span>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-12 col-lg pt-3">
-                                    <label for="orderId" class="form-label ms-1">Item Name</label>
-                                    <input type="text" class="form-control" id="itemName" placeholder="Item Name" aria-label="itemName">
+                                    <label for="orderId" class="form-label ms-1">Item Description</label>
+                                    <input type="text" class="form-control" id="itemName" placeholder="Item Description" aria-label="itemName">
                                 </div>
                             </div>
 
@@ -366,42 +369,47 @@
                             <div class="col-12 col-md-12 col-lg pt-3">
                                 <label for="orderdQTY" class="form-label ms-1">Ordered QTY</label>
                                 <input type="text" class="form-control" id="orderdQTY" placeholder="Ordered QTY" aria-label="orderdQTY">
+                                <span class="txtspan" id="orderQtySpan"></span>
                             </div>
 
                             <div class="d-flex justify-content-end">
-                                <button type="button" class="btn btn-primary mt-3">Add Item</button>
+                                <button id="btn-add-item" type="button" class="btn btn-primary mt-3">Add Item</button>
 
                             </div>
 
                         </div>
                     </div>
 
-                    <div class="order-card card mt-3 d-inline-block col-12 col-md-3 col-sm-12">
+                    <div class="order-card card mt-3 d-inline-block col-12 col-md-3 col-sm-12 text-primary">
                         <div class="card-body">
-                            <label class="form-check-label h4 d-block mb-4">
+                            <label class="form-check-label h4 d-block mb-0 fs-6">
                                 Total :
                             </label>
-                            <label class="form-check-label h4 d-block mb-3">
+                            <span class="text-primary fs-2 m-0" id="totalSpan">00.00</span>
+                            <span class="text-black px-1">Rs/=</span>
+                            <label class="form-check-label h4 d-block mb-0 fs-6 text-danger">
                                 Sub Total :
                             </label>
+                            <span class="text-danger fs-2 m-0" id="subTotalSpan">00.00</span>
+                            <span class="text-black px-1">Rs/=</span>
 
                             <div class="row">
                                 <div class="col-12 col-md-12 col-lg pt-3">
-                                    <label for="cash" class="form-label ms-1">Cash</label>
+                                    <label for="cash" class="form-label ms-1 text-black">Cash</label>
                                     <input type="text" class="form-control" id="cash" placeholder="Cash" aria-label="cash">
                                 </div>
                                 <div class="col-12 col-md-12 col-lg pt-3">
-                                    <label for="discount" class="form-label ms-1">Discount</label>
+                                    <label for="discount" class="form-label ms-1 text-black">Discount</label>
                                     <input type="text" class="form-control" id="discount" placeholder="Discount" aria-label="discount">
                                 </div>
                             </div>
                             <div class="col-12 col-md-12 col-lg pt-3">
-                                <label for="balance" class="form-label ms-1">Balance</label>
+                                <label for="balance" class="form-label ms-1 text-black">Balance</label>
                                 <input type="text" class="form-control" id="balance" placeholder="balance" aria-label="balance">
                             </div>
 
                             <div class="d-flex justify-content-center">
-                                <button type="button" class="btn btn-success mt-3">Add Item</button>
+                                <button type="button" class="btn btn-success mt-3">Place Order</button>
 
                             </div>
                         </div>
@@ -413,27 +421,14 @@
                         <thead>
                         <tr>
                             <th scope="col">Item Code</th>
-                            <th scope="col">Item Name</th>
+                            <th scope="col">Item Description</th>
+                            <th scope="col">Date</th>
                             <th scope="col">Price</th>
                             <th scope="col">QTY</th>
                             <th scope="col">Total</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Sample</td>
-                            <td>Sample</td>
-                            <td>Sample</td>
-                            <td>Sample</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Sample</td>
-                            <td>Sample</td>
-                            <td>Sample</td>
-                            <td>Sample</td>
-                        </tr>
+                        <tbody id="tBody-order">
                         </tbody>
                     </table>
                     <div class="d-flex justify-content-end">
@@ -469,10 +464,14 @@
 <script src="db/db.js"></script>
 <script src="controllers/CustomerController.js"></script>
 <script src="controllers/ItemController.js"></script>
+<script src="controllers/PurchesOrderController.js"></script>
 <script src="model/Customer.js"></script>
 <script src="model/Item.js"></script>
+<script src="model/Order.js"></script>
+<script src="model/OrderDetails.js"></script>
 <script src="controllers/validation/CustomerValidation.js"></script>
 <script src="controllers/validation/Itemvalidation.js"></script>
+<script src="controllers/validation/PurchesOrderValidation.js"></script>
 
 </body>
 </html>

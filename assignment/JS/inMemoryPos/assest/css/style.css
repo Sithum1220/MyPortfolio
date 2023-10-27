@@ -45,3 +45,8 @@ i {
     width: 100px;
     height: 80px;
 }
+
+.txtspan{
+    color: red;
+    font-size: 12px;
+}

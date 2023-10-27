@@ -28,6 +28,8 @@ S('.orders-btn').click(function (){
     S('.customer').css('display','none');
     S('.item').css('display','none');
     S('.orders').css('display','block');
+    setCustomerId();
+    setItemId();
 });
 
 S('#imgID').click(function (){

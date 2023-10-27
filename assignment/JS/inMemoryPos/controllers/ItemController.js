@@ -59,6 +59,7 @@ function saveItem() {
         clearItemInputFields();
         setItemDataTableToTextFeild();
         itemRowdoubleClick();
+        setItemId();
         S('#search').val("");
     }
 }
