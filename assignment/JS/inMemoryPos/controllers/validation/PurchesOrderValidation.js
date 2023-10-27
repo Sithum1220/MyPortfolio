@@ -1,5 +1,6 @@
 const ORDER_ID_REGEX = /^(OR00-)[0-9]{3}$/;
 const PRICE_REGEX = /^[0-9]{2,}([.][0-9]{2})?$/;
+const  DISCOUNT_REGEX = /^[0-9]{1,}([.][0-9]{2})?$/;
 const QTY_REGEX = /[0-9]{1,9}/;
 
 let o_vArray = new Array();
@@ -8,12 +9,13 @@ o_vArray.push({field: S("#orderdQTY"), regEx: QTY_REGEX});
 
 let place_order_vArray = new Array();
 place_order_vArray.push({field: S("#cash"), regEx: PRICE_REGEX});
-place_order_vArray.push({field: S("#discount"), regEx: PRICE_REGEX});
+place_order_vArray.push({field: S("#discount"), regEx: DISCOUNT_REGEX});
 place_order_vArray.push({field: S("#orderId"), regEx: ORDER_ID_REGEX});
 S(window).on('load', function () {
     S("#btn-add-item").prop("disabled", true);
     S("#btn-placeOrder").prop("disabled", true);
     S("#balance").prop("disabled", true);
+    S("#cashSpan").css("display", 'none');
 });
 
 function checkOrderValidation(object) {
@@ -133,7 +135,6 @@ function setBtnOrder() {
 
     if (checkAllOrderReg() && parseInt(S('#orderdQTY').val()) <= parseInt(S('#qtyOnHand').val())) {
         S("#btn-add-item").prop("disabled", false);
-
     } else {
         S("#btn-add-item").prop("disabled", true);
     }
@@ -143,8 +144,10 @@ function setBtnPlaceOrder() {
 
     if (checkAllPlaceOrderReg()) {
         if (finalBalance.startsWith('-')){
+            // S("#cashSpan").css("display", 'block');
             S("#btn-placeOrder").prop("disabled", true);
         }else {
+            // S("#cashSpan").css("display", 'none');
             S("#btn-placeOrder").prop("disabled", false);
         }
 
@@ -181,3 +184,4 @@ function checkOrderedQTY() {
 S('#orderdQTY').on('keyup', function () {
     checkOrderedQTY();
 });
+

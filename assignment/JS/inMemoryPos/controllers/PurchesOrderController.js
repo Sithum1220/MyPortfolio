@@ -165,6 +165,13 @@ function placeOrder() {
         S('#btn-placeOrder').prop('disabled', true);
         S('#totalSpan').text('00.00');
         S('#subTotalSpan').text('00.00');
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Customer has been saved',
+            showConfirmButton: false,
+            timer: 1500
+        })
     }
 
 }
@@ -249,9 +256,9 @@ S('#cash').on('keydown keyup', function () {
     if (S('#discount').val() != '') {
         S('#balance').val(typeCash - subTotal);
     }
+    insufficient();
 });
 S('#discount').on('keyup', function () {
-
     let discount = parseInt(S('#discount').val()) / 100 * parseInt(S('#totalSpan').text());
      subTotal = parseInt(S('#totalSpan').text()) - discount;
     S('#subTotalSpan').text(subTotal);
@@ -264,12 +271,22 @@ S('#discount').on('keyup', function () {
     if (S('#balance').val() == 'NaN'){
         S('#balance').val(balance);
     }
+    finalBalance = S('#balance').val();
+    insufficient();
 });
 
 function searchExistOrder(id) {
     return orderDB.find(function (purchersOrder) {
         return purchersOrder.oid == id;
     });
+}
+function insufficient() {
+    console.log(finalBalance);
+    if (finalBalance.startsWith('-')){
+        S("#cashSpan").css("display", 'block');
+    }else {
+        S("#cashSpan").css("display", 'none');
+    }
 }
 
 
