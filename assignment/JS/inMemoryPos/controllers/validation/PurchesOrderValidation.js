@@ -1,6 +1,6 @@
 const ORDER_ID_REGEX = /^(OR00-)[0-9]{3}$/;
 const PRICE_REGEX = /^[0-9]{2,}([.][0-9]{2})?$/;
-const  DISCOUNT_REGEX = /^[0-9]{1,}([.][0-9]{2})?$/;
+const DISCOUNT_REGEX = /^[0-9]{1,}([.][0-9]{2})?$/;
 const QTY_REGEX = /[0-9]{1,9}/;
 
 let o_vArray = new Array();
@@ -79,10 +79,16 @@ function focusNextOrderTextFeild() {
     S('#orderdQTY,#orderId').on('keyup', function (e) {
         let indexNo = o_vArray.indexOf(o_vArray.find((c) => c.field.attr("id") == e.target.id));
 
+        let checker = checkPlacOrdereValidation(o_vArray[indexNo]);
+
         if (e.key == "Tab") {
             e.preventDefault();
         }
-
+        if (e.key == 'Enter') {
+            if (S('#orderdQTY').val() != "" && checker) {
+                S('#btn-add-item').click();
+            }
+        }
         setBtnOrder();
     });
 }
@@ -98,7 +104,13 @@ function focusNextPlaceOrderTextFeild() {
 
         if (e.key == "Enter") {
 
+            if (S('#cash').val() != "" && checker) {
+                S('#discount').focus();
+            }
 
+            if (S('#discount').val() != "" && checker) {
+                S('#btn-placeOrder').click();
+            }
             // if (searchExistItem(selectedItemId)){
             //     if (checkAllItemReg()) {
             //         S("#itemId").focus();
@@ -127,10 +139,10 @@ function setBtnOrder() {
 function setBtnPlaceOrder() {
 
     if (checkAllPlaceOrderReg()) {
-        if (finalBalance.startsWith('-')){
+        if (finalBalance.startsWith('-')) {
             // S("#cashSpan").css("display", 'block');
             S("#btn-placeOrder").prop("disabled", true);
-        }else {
+        } else {
             // S("#cashSpan").css("display", 'none');
             S("#btn-placeOrder").prop("disabled", false);
         }
