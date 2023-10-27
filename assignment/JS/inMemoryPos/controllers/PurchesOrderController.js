@@ -150,6 +150,26 @@ function placeOrder() {
     } else {
         orderDB.push(order);
         purchersOrder.orderDetails = [];
+
+        let index = -1;
+
+        for (let orderObj of orderDB) {
+            if (orderObj.oid == S('#orderId').val()) {
+                index = orderDB.indexOf(orderObj);
+            }
+        }
+
+        for (let i = 0; i < orderDB[index].orderDetails.length; i++) {
+            let itemID = orderDB[index].orderDetails[i].code;
+
+            for (let itemDBElement of itemDB) {
+                if (itemDBElement.id == itemID){
+                    itemDBElement.qty = itemDBElement.qty - orderDB[index].orderDetails[i].qty;
+                }
+            }
+        }
+
+        loadItemDataTable();
         S('#orderId').val('');
         S('#date').val('');
         S('#OrderedCustomerName').val('');

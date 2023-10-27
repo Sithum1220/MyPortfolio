@@ -52,7 +52,7 @@
             color: #FFFFFF;
         }
 
-        .yellow-btn:hover{
+        .yellow-btn:hover {
             background: #fcb641;
 
         }
@@ -66,12 +66,12 @@
 <section class="main-section d-flex justify-content-center p-5 pt-3">
     <div class=" col-4 bg-black card">
         <div class="card-header input-div p-0 ">
-            <input class="w-100 h-100 border-0 text-xxl-end bg-black text-white px-4" type="text">
+            <input id="result" class="w-100 h-100 border-0 text-xxl-end bg-black text-white px-4" type="text" readonly>
         </div>
         <div class="card-body d-flex flex-wrap px-0">
             <div class="container text-center">
                 <div class="row d-flex gap-3 justify-content-center">
-                    <button class="col-3 btn-div rounded-circle border border-1 border-black first-btn">
+                    <button id="clear" class="col-3 btn-div rounded-circle border border-1 border-black first-btn">
                         AC
                     </button>
                     <button class="col-3 btn-div rounded-circle  border border-1 border-black first-btn">
@@ -82,56 +82,56 @@
                         %
 
                     </button>
-                    <button class="btn-click col-3 btn-div  rounded-circle  border border-1 border-black yellow-btn">
+                    <button class="operator btn-click col-3 btn-div  rounded-circle  border border-1 border-black yellow-btn">
                         /
                     </button>
 
-                    <button class="btn-click col-3 btn-div rounded-circle border border-1 border-black number">
+                    <button class="number btn-click col-3 btn-div rounded-circle border border-1 border-black number">
                         7
                     </button>
-                    <button class="btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
+                    <button class="number btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
                         8
                     </button>
-                    <button class="btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
+                    <button class="number btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
                         9
                     </button>
-                    <button class="btn-click col-3 btn-div  rounded-circle  border border-1 border-black yellow-btn">
+                    <button class="operator btn-click col-3 btn-div  rounded-circle  border border-1 border-black yellow-btn">
                         *
                     </button>
 
-                    <button class="btn-click col-3 btn-div rounded-circle border border-1 border-black number">
+                    <button class="number btn-click col-3 btn-div rounded-circle border border-1 border-black number">
                         4
                     </button>
-                    <button class="btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
+                    <button class="number btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
                         5
                     </button>
-                    <button class="btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
+                    <button class="number btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
                         6
                     </button>
-                    <button class="btn-click col-3 btn-div  rounded-circle  border border-1 border-black yellow-btn">
+                    <button class="operator number btn-click col-3 btn-div  rounded-circle  border border-1 border-black yellow-btn">
                         -
                     </button>
 
-                    <button class="btn-click col-3 btn-div rounded-circle border border-1 border-black number">
+                    <button class="number btn-click col-3 btn-div rounded-circle border border-1 border-black number">
                         1
                     </button>
-                    <button class="btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
+                    <button class="number btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
                         2
                     </button>
-                    <button class="btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
+                    <button class="number btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
                         3
                     </button>
-                    <button class="btn-click col-3 btn-div  rounded-circle  border border-1 border-black yellow-btn">
+                    <button class="operator number btn-click col-3 btn-div  rounded-circle  border border-1 border-black yellow-btn">
                         +
                     </button>
 
-                    <button class="btn-click col-3 btn-div  border border-1 btn0 border-black number">
+                    <button class="number btn-click col-3 btn-div  border border-1 btn0 border-black number">
                         0
                     </button>
                     <button class="btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
                         .
                     </button>
-                    <button class="btn-click col-3 btn-div rounded-circle  border border-1 border-black yellow-btn">
+                    <button id="calculate" class="btn-click col-3 btn-div rounded-circle  border border-1 border-black yellow-btn">
                         =
                     </button>
 
@@ -142,28 +142,9 @@
 </section>
 <script src="../../../assests/boostrap/js/bootstrap.js"></script>
 <script src="js/code.jquery.com_jquery-3.7.1.min.js"></script>
-<section id="s">
-    <ul id="ul">
-        <li>sd</li>
-        <li>qed</li>
-        <li>awd</li>
-        <li>aS</li>
-    </ul>
-    <h1></h1>
-    <input type="text">
-</section>
-
 <script>
-    var S = jQuery.noConflict();
 
-    S('button').click(function () {
-        let number = S(this).text();
-        S('input').val(number)
-
-    });
-
-
-    S('body').children(':nth-child(4)').children(':nth-child(1)').children(':nth-child(2)')
+</script>
 </script>
 </body>
 </html>
