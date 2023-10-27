@@ -7,7 +7,7 @@ let orderQty;
 let cash;
 let discount;
 let order;
-let orderDetail
+let orderDetail;
 let finalBalance;
 let typeCash;
 let subTotal;
@@ -149,7 +149,7 @@ function placeOrder() {
         });
     } else {
         orderDB.push(order);
-
+        purchersOrder.orderDetails = [];
         S('#orderId').val('');
         S('#date').val('');
         S('#OrderedCustomerName').val('');
@@ -203,9 +203,11 @@ function orderAddToCart() {
         orderDetail.unitPrice = price;
         orderDetail.code = orderedItemId;
 
-        if (searchExistCartItem(orderedItemId, order)) {
+        if (searchExistCartItem(orderedItemId)) {
+            alert('if')
                 getDataByItemID(order.orderDetails, orderedItemId).qty = parseInt(getDataByItemID(order.orderDetails, orderedItemId).qty) + parseInt(orderQty);
         } else {
+            alert('else')
             order.orderDetails.push(orderDetail);
         }
 
@@ -251,9 +253,9 @@ function getDataByItemID(arr, id) {
     return null;
 }
 
-function searchExistCartItem(id, obj) {
-    return obj.orderDetails.find(function (obj) {
-        return obj.code == id;
+function searchExistCartItem(id) {
+    return order.orderDetails.find(function (orderDetail) {
+        return orderDetail.code == id;
     });
 }
 
@@ -294,7 +296,6 @@ function searchExistOrder(id) {
 }
 
 function insufficient() {
-    console.log(finalBalance);
     if (finalBalance.startsWith('-')) {
         S("#cashSpan").css("display", 'block');
     } else {
