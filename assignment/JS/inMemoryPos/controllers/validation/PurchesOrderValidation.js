@@ -3,16 +3,17 @@ const PRICE_REGEX = /^[0-9]{2,}([.][0-9]{2})?$/;
 const QTY_REGEX = /[0-9]{1,9}/;
 
 let o_vArray = new Array();
-let place_order_vArray = new Array();
 o_vArray.push({field: S("#orderId"), regEx: ORDER_ID_REGEX});
 o_vArray.push({field: S("#orderdQTY"), regEx: QTY_REGEX});
 
+let place_order_vArray = new Array();
 place_order_vArray.push({field: S("#cash"), regEx: PRICE_REGEX});
 place_order_vArray.push({field: S("#discount"), regEx: PRICE_REGEX});
-
+place_order_vArray.push({field: S("#orderId"), regEx: ORDER_ID_REGEX});
 S(window).on('load', function () {
     S("#btn-add-item").prop("disabled", true);
     S("#btn-placeOrder").prop("disabled", true);
+    S("#balance").prop("disabled", true);
 });
 
 function checkOrderValidation(object) {
@@ -101,7 +102,7 @@ function focusNextOrderTextFeild() {
 }
 
 function focusNextPlaceOrderTextFeild() {
-    S('#cash,#discount').on('keyup', function (e) {
+    S('#cash,#discount,#orderId').on('keyup', function (e) {
         let indexNo = place_order_vArray.indexOf(place_order_vArray.find((c) => c.field.attr("id") == e.target.id));
 
         if (e.key == "Tab") {
@@ -140,8 +141,12 @@ function setBtnOrder() {
 
 function setBtnPlaceOrder() {
 
-    if (checkAllPlaceOrderReg() && checkAllOrderReg()) {
-        S("#btn-placeOrder").prop("disabled", false);
+    if (checkAllPlaceOrderReg()) {
+        if (finalBalance.startsWith('-')){
+            S("#btn-placeOrder").prop("disabled", true);
+        }else {
+            S("#btn-placeOrder").prop("disabled", false);
+        }
 
     } else {
         S("#btn-placeOrder").prop("disabled", true);

@@ -1,6 +1,6 @@
 let orderDetails = {
     oid:"",
-    z:"",
+    code:"",
     qty:0,
     unitPrice:0
 }

@@ -6,6 +6,12 @@ let price;
 let orderQty;
 let cash;
 let discount;
+let order;
+let orderDetail
+let finalBalance;
+let typeCash;
+let subTotal;
+let balance;
 S('#OrderedCustomerName').prop('disabled', true);
 S('#OrderedCustomerAddress').prop('disabled', true);
 S('#itemName').prop('disabled', true);
@@ -22,11 +28,6 @@ S(window).on('load', function () {
     S('#orderQtySpan').css('display', 'none');
     S('#orderdQTY').css('border', '1px solid #ced4da');
 });
-
-function getAllOrderDetailsForTextFeild() {
-    cash = S('#cash').val();
-    discount = S('#discount').val();
-}
 
 function setCustomerId() {
     S('#inputCustomerId').empty();
@@ -81,8 +82,8 @@ S('#inputItemCode').on('change', function () {
         S('#price').val(getDataById(itemDB, orderedItemId).unitPrice);
         S('#itemIdSpan').css('display', 'none');
         S('#inputItemCode').css("border", "1px solid #ced4da");
-        checkOrderedQTY();
     }
+    checkOrderedQTY();
 });
 
 S('#date').on('change', function () {
@@ -113,15 +114,68 @@ S('#btn-add-item').click(function () {
     }
 });
 
-S()
+S('#btn-placeOrder').click(function () {
+    if (checkAllPlaceOrderReg()) {
+        if (S('#inputItemCode').val() == 'Choose...') {
+            S('#itemIdSpan').css('display', 'block');
+            S('#inputItemCode').css('border', '1px solid red');
+        }
+        if (S('#inputCustomerId').val() == 'Choose...') {
+            S('#cusIdSpan').css('display', 'block');
+            S('#inputCustomerId').css('border', '1px solid red');
+        }
+        if (S('#date').val() == '') {
+            S('#dateSpan').css('display', 'block');
+            S('#date').css('border', '1px solid red');
+        }
+        if (S('#inputItemCode').val() != 'Choose...' && S('#inputCustomerId').val() != 'Choose...' && S('#date').val() != '') {
+            placeOrder();
+        }
+    } else {
+        alert('error');
+    }
+});
+
+function placeOrder() {
+    cash = S('#cash').val();
+    discount = S('#discount').val();
+
+
+    if (searchExistOrder(orderID.trim())){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'This Order Already Exist.'
+        });
+    }else {
+        orderDB.push(order);
+
+        S('#orderId').val('');
+        S('#date').val('');
+        S('#OrderedCustomerName').val('');
+        S('#OrderedCustomerAddress').val('');
+        S('#itemName').val('');
+        S('#price').val('');
+        S('#qtyOnHand').val('');
+        S('#cash').val('');
+        S('#discount').val('');
+        S('#balance').val('');
+        S('#inputItemCode').val('Choose...');
+        S('#inputCustomerId').val('Choose...');
+        S('#btn-placeOrder').prop('disabled', true);
+        S('#totalSpan').text('00.00');
+        S('#subTotalSpan').text('00.00');
+    }
+
+}
 
 function orderAddToCart() {
     orderID = S('#orderId').val();
     orderQty = S('#orderdQTY').val();
     price = S('#price').val();
 
-    let order = Object.assign({}, purchersOrder);
-    let orderDetail = Object.assign({}, orderDetails);
+    order = Object.assign({}, purchersOrder);
+    orderDetail = Object.assign({}, orderDetails);
 
     order.oid = orderID;
     order.date = orderDate;
@@ -133,7 +187,6 @@ function orderAddToCart() {
     orderDetail.code = orderedItemId;
 
     if (searchExistCartItem(orderedItemId, order)) {
-
         getDataByItemID(order.orderDetails, orderedItemId).qty = parseInt(getDataByItemID(order.orderDetails, orderedItemId).qty) + parseInt(orderQty);
     } else {
         order.orderDetails.push(orderDetail);
@@ -182,6 +235,40 @@ function getDataByItemID(arr, id) {
 function searchExistCartItem(id, obj) {
     return obj.orderDetails.find(function (obj) {
         return obj.code == id;
+    });
+}
+
+S('#cash').on('keydown keyup', function () {
+     balance = parseInt(S('#cash').val()) - parseInt(S('#totalSpan').text());
+    S('#balance').val(balance);
+    if (S('#balance').val() == 'NaN') {
+        S('#balance').val(0);
+    }
+    finalBalance = S('#balance').val();
+    typeCash = S('#cash').val();
+    if (S('#discount').val() != '') {
+        S('#balance').val(typeCash - subTotal);
+    }
+});
+S('#discount').on('keyup', function () {
+
+    let discount = parseInt(S('#discount').val()) / 100 * parseInt(S('#totalSpan').text());
+     subTotal = parseInt(S('#totalSpan').text()) - discount;
+    S('#subTotalSpan').text(subTotal);
+
+    if (S('#subTotalSpan').text() == 'NaN') {
+        S('#subTotalSpan').text(S('#totalSpan').text());
+    }
+    S('#balance').val(typeCash - subTotal);
+
+    if (S('#balance').val() == 'NaN'){
+        S('#balance').val(balance);
+    }
+});
+
+function searchExistOrder(id) {
+    return orderDB.find(function (purchersOrder) {
+        return purchersOrder.oid == id;
     });
 }
 
