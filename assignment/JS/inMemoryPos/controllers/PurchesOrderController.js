@@ -141,13 +141,13 @@ function placeOrder() {
     discount = S('#discount').val();
 
 
-    if (searchExistOrder(orderID.trim())){
+    if (searchExistOrder(orderID.trim())) {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'This Order Already Exist.'
         });
-    }else {
+    } else {
         orderDB.push(order);
 
         S('#orderId').val('');
@@ -166,6 +166,8 @@ function placeOrder() {
         S('#totalSpan').text('00.00');
         S('#subTotalSpan').text('00.00');
         S('#tBody-order').empty();
+
+
         Swal.fire({
             position: 'top-end',
             icon: 'success',
@@ -185,35 +187,44 @@ function orderAddToCart() {
     order = Object.assign({}, purchersOrder);
     orderDetail = Object.assign({}, orderDetails);
 
-    order.oid = orderID;
-    order.date = orderDate;
-    order.customerID = orderedCustomerId;
-
-    orderDetail.oid = orderID;
-    orderDetail.qty = orderQty;
-    orderDetail.unitPrice = price;
-    orderDetail.code = orderedItemId;
-
-    if (searchExistCartItem(orderedItemId, order)) {
-        getDataByItemID(order.orderDetails, orderedItemId).qty = parseInt(getDataByItemID(order.orderDetails, orderedItemId).qty) + parseInt(orderQty);
+    if (searchExistOrder(orderID.trim())) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'This Order Already Exist.'
+        });
     } else {
-        order.orderDetails.push(orderDetail);
+        order.oid = orderID;
+        order.date = orderDate;
+        order.customerID = orderedCustomerId;
+
+        orderDetail.oid = orderID;
+        orderDetail.qty = orderQty;
+        orderDetail.unitPrice = price;
+        orderDetail.code = orderedItemId;
+
+        if (searchExistCartItem(orderedItemId, order)) {
+                getDataByItemID(order.orderDetails, orderedItemId).qty = parseInt(getDataByItemID(order.orderDetails, orderedItemId).qty) + parseInt(orderQty);
+        } else {
+            order.orderDetails.push(orderDetail);
+        }
+
+        // let total = parseInt(getDataByItemID(order.orderDetails, orderedItemId).qty) * price;
+
+        let total = 0;
+        S('#tBody-order').empty();
+        for (let orderElement of order.orderDetails) {
+            var row = `<tr><td>${orderElement.code}</td><td>${getDataById(itemDB, orderElement.code).description}</td><td>${order.date}</td><td>${orderElement.unitPrice}</td><td>${orderElement.qty}</td><td>${parseInt(orderElement.unitPrice) * parseInt(orderElement.qty)}</td></tr>`;
+            S('#tBody-order').append(row)
+
+            total += parseInt(orderElement.unitPrice) * parseInt(orderElement.qty);
+        }
+        S('#totalSpan').text(total);
+        S('#subTotalSpan').text(total);
+        S('#orderdQTY').val('');
+        setBtnOrder();
+
     }
-
-    // let total = parseInt(getDataByItemID(order.orderDetails, orderedItemId).qty) * price;
-
-    let total = 0;
-    S('#tBody-order').empty();
-    for (let orderElement of order.orderDetails) {
-        var row = `<tr><td>${orderElement.code}</td><td>${getDataById(itemDB, orderElement.code).description}</td><td>${order.date}</td><td>${orderElement.unitPrice}</td><td>${orderElement.qty}</td><td>${parseInt(orderElement.unitPrice) * parseInt(orderElement.qty)}</td></tr>`;
-        S('#tBody-order').append(row)
-
-        total += parseInt(orderElement.unitPrice) * parseInt(orderElement.qty);
-    }
-    S('#totalSpan').text(total);
-    S('#subTotalSpan').text(total);
-    S('#orderdQTY').val('');
-    setBtnOrder();
 }
 
 function getDataById(arr, id) {
@@ -247,7 +258,7 @@ function searchExistCartItem(id, obj) {
 }
 
 S('#cash').on('keydown keyup', function () {
-     balance = parseInt(S('#cash').val()) - parseInt(S('#totalSpan').text());
+    balance = parseInt(S('#cash').val()) - parseInt(S('#totalSpan').text());
     S('#balance').val(balance);
     if (S('#balance').val() == 'NaN') {
         S('#balance').val(0);
@@ -261,7 +272,7 @@ S('#cash').on('keydown keyup', function () {
 });
 S('#discount').on('keyup', function () {
     let discount = parseInt(S('#discount').val()) / 100 * parseInt(S('#totalSpan').text());
-     subTotal = parseInt(S('#totalSpan').text()) - discount;
+    subTotal = parseInt(S('#totalSpan').text()) - discount;
     S('#subTotalSpan').text(subTotal);
 
     if (S('#subTotalSpan').text() == 'NaN') {
@@ -269,7 +280,7 @@ S('#discount').on('keyup', function () {
     }
     S('#balance').val(typeCash - subTotal);
 
-    if (S('#balance').val() == 'NaN'){
+    if (S('#balance').val() == 'NaN') {
         S('#balance').val(balance);
     }
     finalBalance = S('#balance').val();
@@ -281,25 +292,14 @@ function searchExistOrder(id) {
         return purchersOrder.oid == id;
     });
 }
+
 function insufficient() {
     console.log(finalBalance);
-    if (finalBalance.startsWith('-')){
+    if (finalBalance.startsWith('-')) {
         S("#cashSpan").css("display", 'block');
-    }else {
+    } else {
         S("#cashSpan").css("display", 'none');
     }
 }
 
-function searchOrders() {
-    S('#search').on('keyup', function () {
-        S('#tBody-order').empty();
-        for (let orderDBElement of orderDB) {
-            for (let i = 0; i < orderDBElement.orderDetails.length; i++) {
-                var row = `<tr><td>${orderDBElement.orderDetails[i].code}</td><td>${getDataByCustomerID(itemDB, orderDBElement.orderDetails[i].code).description}</td><td>${orderDBElement.date}</td><td>${orderDBElement.orderDetails[i].unitPrice}</td><td>${orderDBElement.orderDetails[i].qty}</td><td>${parseInt(orderDBElement.orderDetails[i].unitPrice) * parseInt(orderDBElement.orderDetails[i].qty)}</td></tr>`;
-                S('#tBody-order').append(row)
-            }
-        }
-    });
-
-}
 
