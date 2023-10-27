@@ -82,23 +82,7 @@ function focusNextOrderTextFeild() {
         if (e.key == "Tab") {
             e.preventDefault();
         }
-        let checker = checkOrderValidation(o_vArray[indexNo]);
 
-        if (e.key == "Enter") {
-
-
-            // if (searchExistItem(selectedItemId)){
-            //     if (checkAllItemReg()) {
-            //         S("#itemId").focus();
-            //         S('#btn-update-item').click();
-            //     }
-            // }else {
-            //     if (checkAllItemReg()) {
-            //         S("#itemId").focus();
-            //         S('#btn-save-item').click();
-            //     }
-            // }
-        }
         setBtnOrder();
     });
 }

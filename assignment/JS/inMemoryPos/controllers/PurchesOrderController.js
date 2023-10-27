@@ -165,6 +165,7 @@ function placeOrder() {
         S('#btn-placeOrder').prop('disabled', true);
         S('#totalSpan').text('00.00');
         S('#subTotalSpan').text('00.00');
+        S('#tBody-order').empty();
         Swal.fire({
             position: 'top-end',
             icon: 'success',
@@ -289,5 +290,16 @@ function insufficient() {
     }
 }
 
+function searchOrders() {
+    S('#search').on('keyup', function () {
+        S('#tBody-order').empty();
+        for (let orderDBElement of orderDB) {
+            for (let i = 0; i < orderDBElement.orderDetails.length; i++) {
+                var row = `<tr><td>${orderDBElement.orderDetails[i].code}</td><td>${getDataByCustomerID(itemDB, orderDBElement.orderDetails[i].code).description}</td><td>${orderDBElement.date}</td><td>${orderDBElement.orderDetails[i].unitPrice}</td><td>${orderDBElement.orderDetails[i].qty}</td><td>${parseInt(orderDBElement.orderDetails[i].unitPrice) * parseInt(orderDBElement.orderDetails[i].qty)}</td></tr>`;
+                S('#tBody-order').append(row)
+            }
+        }
+    });
 
+}
 

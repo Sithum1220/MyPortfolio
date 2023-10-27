@@ -30,6 +30,8 @@ S('.orders-btn').click(function (){
     S('.orders').css('display','block');
     setCustomerId();
     setItemId();
+    S('#search').off('keyup');
+    searchOrders();
 });
 
 S('#imgID').click(function (){
