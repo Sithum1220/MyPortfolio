@@ -175,6 +175,7 @@ function checkOrderedQTY() {
         S('#orderQtySpan').text('This item is out of stock.');
         S('#orderQtySpan').css('display', 'block');
         S('#orderdQTY').css('border', '1px solid red');
+        S("#btn-add-item").prop("disabled", true);
     }
 
     if (S('#orderdQTY').val() == '') {
