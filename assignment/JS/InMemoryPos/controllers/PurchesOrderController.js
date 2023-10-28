@@ -4,8 +4,8 @@ let orderDate;
 let orderedItemId;
 let price;
 let orderQty;
-let cash;
-let discount;
+// let cash;
+// let discount;
 let order;
 let orderDetail;
 let finalBalance;
@@ -137,8 +137,8 @@ S('#btn-placeOrder').click(function () {
 });
 
 function placeOrder() {
-    cash = S('#cash').val();
-    discount = S('#discount').val();
+    // cash = S('#cash').val();
+    // discount = S('#discount').val();
 
 
     if (searchExistOrder(orderID.trim())) {
@@ -285,7 +285,7 @@ S('#cash').on('keydown keyup', function () {
     balance = parseInt(S('#cash').val()) - parseInt(S('#totalSpan').text());
     S('#balance').val(balance);
     if (S('#balance').val() == 'NaN') {
-        S('#balance').val(0);
+        S('#balance').val('');
     }
     finalBalance = S('#balance').val();
     typeCash = S('#cash').val();
@@ -310,7 +310,8 @@ S('#discount').on('keyup', function () {
     finalBalance = S('#balance').val();
     insufficient();
 });
-
+// S('#subTotalSpan').text(100);
+// S('#totalSpan').text(100);
 function searchExistOrder(id) {
     return orderDB.find(function (order) {
         return order.oid == id;
