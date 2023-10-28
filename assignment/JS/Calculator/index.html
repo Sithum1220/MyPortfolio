@@ -66,16 +66,16 @@
 <section class="main-section d-flex justify-content-center p-5 pt-3">
     <div class=" col-4 bg-black card">
         <div class="card-header input-div p-0 ">
-            <input id="result" class="w-100 h-100 border-0 text-xxl-end bg-black text-white px-4" type="text" readonly>
+            <input class="w-100 h-100 border-0 text-xxl-end bg-black text-white px-4" id="input" readonly type="text">
         </div>
         <div class="card-body d-flex flex-wrap px-0">
             <div class="container text-center">
                 <div class="row d-flex gap-3 justify-content-center">
-                    <button id="clear" class="col-3 btn-div rounded-circle border border-1 border-black first-btn">
+                    <button id="clear" class="number col-3 btn-div rounded-circle border border-1 border-black first-btn">
                         AC
                     </button>
-                    <button class="col-3 btn-div rounded-circle  border border-1 border-black first-btn">
-                        +/-
+                    <button  class="number col-3 btn-div rounded-circle  border border-1 border-black first-btn">
+                        C
 
                     </button>
                     <button class="btn-click col-3 btn-div rounded-circle  border border-1 border-black first-btn">
@@ -86,52 +86,53 @@
                         /
                     </button>
 
-                    <button class="number btn-click col-3 btn-div rounded-circle border border-1 border-black number">
+                    <button onclick="setNumberForInput(7)" class="number btn-click col-3 btn-div rounded-circle border border-1 border-black number">
                         7
                     </button>
-                    <button class="number btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
+                    <button onclick="setNumberForInput(8)" class="number btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
                         8
                     </button>
-                    <button class="number btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
+                    <button onclick="setNumberForInput(9)" class="number btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
                         9
                     </button>
                     <button class="operator btn-click col-3 btn-div  rounded-circle  border border-1 border-black yellow-btn">
                         *
                     </button>
 
-                    <button class="number btn-click col-3 btn-div rounded-circle border border-1 border-black number">
+                    <button onclick="setNumberForInput(4)" class="number btn-click col-3 btn-div rounded-circle border border-1 border-black number">
                         4
                     </button>
-                    <button class="number btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
+                    <button onclick="setNumberForInput(5)" class="number btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
                         5
                     </button>
-                    <button class="number btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
+                    <button onclick="setNumberForInput(5)" class="number btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
                         6
                     </button>
-                    <button class="operator number btn-click col-3 btn-div  rounded-circle  border border-1 border-black yellow-btn">
+                    <button  class="operator number btn-click col-3 btn-div  rounded-circle  border border-1 border-black yellow-btn">
                         -
                     </button>
 
-                    <button class="number btn-click col-3 btn-div rounded-circle border border-1 border-black number">
+                    <button onclick="setNumberForInput(1)" class="number btn-click col-3 btn-div rounded-circle border border-1 border-black number">
                         1
                     </button>
-                    <button class="number btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
+                    <button onclick="setNumberForInput(2)" class="number btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
                         2
                     </button>
-                    <button class="number btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
+                    <button onclick="setNumberForInput(3)" class="number btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
                         3
                     </button>
                     <button class="operator number btn-click col-3 btn-div  rounded-circle  border border-1 border-black yellow-btn">
                         +
                     </button>
 
-                    <button class="number btn-click col-3 btn-div  border border-1 btn0 border-black number">
+                    <button onclick="setNumberForInput(0)" class="number btn-click col-3 btn-div  border border-1 btn0 border-black number">
                         0
                     </button>
-                    <button class="btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
+                    <button onclick="setNumberForInput('.')" class="btn-click col-3 btn-div rounded-circle  border border-1 border-black number">
                         .
                     </button>
-                    <button id="calculate" class="btn-click col-3 btn-div rounded-circle  border border-1 border-black yellow-btn">
+                    <button class="btn-click col-3 btn-div rounded-circle  border border-1 border-black yellow-btn"
+                            id="calculate">
                         =
                     </button>
 
@@ -142,9 +143,6 @@
 </section>
 <script src="../../../assests/boostrap/js/bootstrap.js"></script>
 <script src="js/code.jquery.com_jquery-3.7.1.min.js"></script>
-<script>
-
-</script>
-</script>
+<script src="js/script.js"></script>
 </body>
 </html>

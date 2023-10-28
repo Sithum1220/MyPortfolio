@@ -79,7 +79,7 @@ function focusNextOrderTextFeild() {
     S('#orderdQTY,#orderId').on('keyup', function (e) {
         let indexNo = o_vArray.indexOf(o_vArray.find((c) => c.field.attr("id") == e.target.id));
 
-        let checker = checkPlacOrdereValidation(o_vArray[indexNo]);
+        let checker = checkOrderValidation(o_vArray[indexNo]);
 
         if (e.key == "Tab") {
             e.preventDefault();
@@ -100,7 +100,7 @@ function focusNextPlaceOrderTextFeild() {
         if (e.key == "Tab") {
             e.preventDefault();
         }
-        let checker = checkOrderValidation(place_order_vArray[indexNo]);
+        let checker = checkPlacOrdereValidation(place_order_vArray[indexNo]);
 
         if (e.key == "Enter") {
 
