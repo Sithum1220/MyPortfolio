@@ -223,6 +223,7 @@ function orderAddToCart() {
         orderDetail.unitPrice = price;
         orderDetail.code = orderedItemId;
 
+
         if (searchExistCartItem(orderedItemId)) {
                 getDataByItemID(order.orderDetails, orderedItemId).qty = parseInt(getDataByItemID(order.orderDetails, orderedItemId).qty) + parseInt(orderQty);
         } else {
@@ -230,7 +231,9 @@ function orderAddToCart() {
         }
 
         // let total = parseInt(getDataByItemID(order.orderDetails, orderedItemId).qty) * price;
-
+        let qtyOnHandBalance = parseInt(S('#qtyOnHand').val()) - orderQty;
+        console.log(qtyOnHandBalance)
+        S('#qtyOnHand').val(qtyOnHandBalance);
         let total = 0;
         S('#tBody-order').empty();
         for (let orderElement of order.orderDetails) {
@@ -239,6 +242,7 @@ function orderAddToCart() {
 
             total += parseInt(orderElement.unitPrice) * parseInt(orderElement.qty);
         }
+
         S('#totalSpan').text(total);
         S('#subTotalSpan').text(total);
         S('#orderdQTY').val('');

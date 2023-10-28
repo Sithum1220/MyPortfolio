@@ -155,7 +155,7 @@ function setBtnPlaceOrder() {
 
 function checkOrderedQTY() {
 
-    if (S('#qtyOnHand').val() != '') {
+    if (S('#qtyOnHand').val() != '' && parseInt(S('#qtyOnHand').val()) != 0) {
         if (parseInt(S('#orderdQTY').val()) <= parseInt(S('#qtyOnHand').val()) && parseInt(S('#orderdQTY').val()) != 0) {
             S('#orderQtySpan').css('display', 'none');
             S('#orderdQTY').css('border', '1px solid #ced4da');
@@ -167,6 +167,12 @@ function checkOrderedQTY() {
         }
     } else {
         S('#orderQtySpan').text('Please select item');
+        S('#orderQtySpan').css('display', 'block');
+        S('#orderdQTY').css('border', '1px solid red');
+    }
+
+    if (parseInt(S('#qtyOnHand').val()) == 0){
+        S('#orderQtySpan').text('This item is out of stock.');
         S('#orderQtySpan').css('display', 'block');
         S('#orderdQTY').css('border', '1px solid red');
     }
